@@ -1,0 +1,22 @@
+.div-body{
+    background-image: url('/img-background/fondo-tablet(2).jpg');
+    background-size: cover;
+    background-position: center;
+    width: 98%;
+    height: 50%;
+}
+
+.olex-tablet{
+    max-width: 60%;
+}
+
+.h1-olex{
+    font-size: 110px;
+    font-weight: bolder;
+}
+
+.h2-kids{
+    font-size: 90px;
+    font-weight: bolder;
+
+}
