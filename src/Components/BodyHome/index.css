@@ -18,5 +18,40 @@
 .h2-kids{
     font-size: 90px;
     font-weight: bolder;
+}
 
+
+
+.div-olax-happy{
+    width: 98%;
+    height: 100%;
+    background: linear-gradient(to bottom, #be0c0c 0%,#a70b0b ,#d61f1f44 100%);
+}
+
+
+@media (max-width: 254px) {
+    .h1-olex{
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .h2-kids{
+        font-size: 40px;
+    }
+    .div-button{
+        width: max-content;
+    }
+    .olex-tablet{
+        width: 100%;
+    }
+    .div-h1-ex h1{
+        font-size: 36px;
+        margin-left: 6px;
+    }
+    .div-icon{
+        padding-top: 12px;
+    }
+
+    .div-text-center{
+        text-align: center;
+    }
 }

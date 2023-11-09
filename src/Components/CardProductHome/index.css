@@ -1,0 +1,27 @@
+@media (max-width: 254px) {
+    .div-modal {
+        width: 100%;
+    }
+    .div-t-p{
+        margin: 4px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .div-icon{
+        margin-right: 10px;
+    }
+    .div-icon div{
+        text-align: center;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .div-icon figure{
+        text-align: center;
+        width: 30px;
+    }
+}
