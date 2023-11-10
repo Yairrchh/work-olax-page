@@ -1,0 +1,33 @@
+.div-contact {
+    background-image: url('/public/img-background/fondo-contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #ff333370;
+    background-blend-mode: color;
+}
+
+.div-contain {
+    background-image: url('/public/img-background/fondo-tlf_1_.avif');
+    background-size: cover;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label{
+    transform: translateY(-8px) scale(.7);
+    transform-origin: left top;
+    color: #3866f2;
+    font-size: 18px;
+}
+
+.form__label{
+
+    color: #706c6c;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+
+@media (max-width: 254px) {
+    .div-contain {
+        width: 100%;
+    }
+}

@@ -1,9 +1,9 @@
+import { Maps } from "../../Components/Maps";
+
 const ProductsPage = () => {
     return (
         <div>
-            <p>
-                product Page
-            </p>
+            <p>products page</p>
         </div>
     )
 }

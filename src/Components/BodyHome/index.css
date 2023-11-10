@@ -25,7 +25,10 @@
 .div-olax-happy{
     width: 98%;
     height: 100%;
-    background: linear-gradient(to bottom, #be0c0c 0%,#a70b0b ,#d61f1f44 100%);
+    background-image: url('/public/img-background/estrechando-manos.jpg');
+    background-size: cover;
+    background-color: #ff333370;
+    background-blend-mode: color;
 }
 
 

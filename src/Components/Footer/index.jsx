@@ -9,7 +9,7 @@ import iconInstagram from "/icon-footer/instagram.svg"
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col items-center justify-center gap-y-10">
+        <footer className="flex flex-col items-center justify-center gap-y-10 mt-20">
             <div className="w-40 h-44 mt-2">
                 <img className="w-full h-full" src={olaxLogo}/>
             </div>
