@@ -1,4 +1,3 @@
-import { Maps } from "../../Components/Maps";
 
 const ProductsPage = () => {
     return (

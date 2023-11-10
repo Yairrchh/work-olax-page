@@ -10,6 +10,7 @@ import imgCliente from "/icon-home/servicio-al-cliente.svg"
 import iconCheck from "/icon-home/icon-check.svg"
 import iconSegurity from "/icon-home/icon-segurity.svg"
 import iconPrecio from "/icon-home/icon-precio.svg"
+import imgPersona from "/img-background/imagen-olax-persona.png"
 
 const BodyHome = () => {
 
@@ -20,7 +21,7 @@ const BodyHome = () => {
         <>
         <div className="div-body flex flex-wrap gap-2 items-center justify-between rounded-xl ml-3">
             <div className="w-96 flex flex-col items-center ml-10">
-                <h1 className="h1-olex text-white border-1">OLEX</h1>
+                <h1 className="h1-olex text-white border-1">OLAX</h1>
                 <h2 className="h2-kids -mt-8">KIDS</h2>
                 <div className="div-button">
                     <button className="button-view-more bg-indigo-600 py-3 p-5 rounded-2xl text-white text-xl
@@ -51,41 +52,48 @@ const BodyHome = () => {
                     con los demás, la tecnología<br/> es la clave para avanzar en nuestra sociedad cada vez más digital.</p>
             </div>
         </div>
-        <div className="div-icon flex flex-wrap items-center justify-center gap-40 gap-y-6 mt-16">
-            <div className="w-96 h-36 flex items-center justify-center">
-                <div className="div-text-center">
-                    <h1 className="font-bold text-2xl">Atencion al Cliente</h1>
-                    <p className="">Reunimos a las personas adecuadas para darte el mas rapido y mejor servicio.</p>
-                </div>
-                <div className="bg-red-600 w-28 h-16 rounded-2xl px-3" >
-                    <img className="w-full h-full" src={imgCliente}/>
-                </div>
+        <div className="flex items-center justify-center mt-16 mb-32">
+            <div className="w-3/4">
+                <figure>
+                    <img className="w-full h-full" src={imgPersona}/>
+                </figure>
             </div>
-            <div className="w-96 h-36 flex items-center justify-center">
-                <div className="div-text-center">
-                    <h1 className="font-bold text-2xl">Calidad</h1>
-                    <p>Equipos elaborados con tecnologia de punta y los mejores materiales.</p>
+            <div className="div-icon flex flex-wrap items-center justify-center gap-10 gap-y-6">
+                <div className="w-96 h-36 flex items-center justify-center">
+                    <div className="div-text-center">
+                        <h1 className="font-bold text-2xl">Atencion al Cliente</h1>
+                        <p className="">Reunimos a las personas adecuadas para darte el mas rapido y mejor servicio.</p>
+                    </div>
+                    <div className="bg-red-600 w-28 h-16 rounded-2xl px-3" >
+                        <img className="w-full h-full" src={imgCliente}/>
+                    </div>
                 </div>
-                <div className="bg-red-600 w-28 h-16 rounded-2xl px-3">
-                    <img className="w-full h-full" src={imgPulgar}/>
+                <div className="w-96 h-36 flex items-center justify-center">
+                    <div className="div-text-center">
+                        <h1 className="font-bold text-2xl">Calidad</h1>
+                        <p>Equipos elaborados con tecnologia de punta y los mejores materiales.</p>
+                    </div>
+                    <div className="bg-red-600 w-28 h-16 rounded-2xl px-3">
+                        <img className="w-full h-full" src={imgPulgar}/>
+                    </div>
                 </div>
-            </div>
-            <div className="w-96 h-36 flex items-center justify-center">
-                <div className="div-text-center">
-                    <h1 className="font-bold text-2xl">Buenos precios</h1>
-                    <p>Los mas accesibles y mejores precios que puedes encontrar en el mercado.</p>
+                <div className="w-96 h-36 flex items-center justify-center">
+                    <div className="div-text-center">
+                        <h1 className="font-bold text-2xl">Buenos precios</h1>
+                        <p>Los mas accesibles y mejores precios que puedes encontrar en el mercado.</p>
+                    </div>
+                    <div className="bg-red-600 w-28 h-16 rounded-2xl px-3">
+                        <img className="w-full h-full" src={imgBajoPrecio}/>
+                    </div>
                 </div>
-                <div className="bg-red-600 w-28 h-16 rounded-2xl px-3">
-                    <img className="w-full h-full" src={imgBajoPrecio}/>
-                </div>
-            </div>
-            <div className="w-96 h-36 flex items-center justify-center">
-                <div className="div-text-center">
-                    <h1 className="font-bold text-2xl">Horarios flexibles</h1>
-                    <p>Puedes contar con nuestro equipo los 365 del año.</p>
-                </div>
-                <div className="bg-red-600 w-25 h-16 rounded-2xl px-3">
-                    <img className="w-full h-full" src={imgCalendario}/>
+                <div className="w-96 h-36 flex items-center justify-center">
+                    <div className="div-text-center">
+                        <h1 className="font-bold text-2xl">Horarios flexibles</h1>
+                        <p>Puedes contar con nuestro equipo los 365 del año.</p>
+                    </div>
+                    <div className="bg-red-600 w-25 h-16 rounded-2xl px-3">
+                        <img className="w-full h-full" src={imgCalendario}/>
+                    </div>
                 </div>
             </div>
         </div>
