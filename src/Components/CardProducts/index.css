@@ -1,0 +1,9 @@
+.div-container{
+    background-image: url('/img-background/fondoproducts.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-color: #ff333391;
+    background-blend-mode: color;
+    width: 98%;
+    height: 60%;
+}

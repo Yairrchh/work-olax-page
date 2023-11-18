@@ -2,7 +2,7 @@ import { olaxPageContext } from "../../Context";
 import { useContext } from "react";
 import { ProductsListHome } from "./ProductsListHome";
 import "./index.css"
-import olexKids from "/products/tablet-olax-kids.png"
+import olexKids from "/productsHome/olaxmagicq8.webp"
 import imgBajoPrecio from "/icon-home/bajo-precio.svg"
 import imgCalendario from "/icon-home/calendario-icon.svg"
 import imgPulgar from "/icon-home/pulgar.svg"
@@ -19,20 +19,20 @@ const BodyHome = () => {
 
     return (
         <>
-        <div className="div-body flex flex-wrap gap-2 items-center justify-between rounded-xl ml-3">
-            <div className="w-96 flex flex-col items-center ml-10">
-                <h1 className="h1-olex text-white border-1">OLAX</h1>
-                <h2 className="h2-kids -mt-8">KIDS</h2>
-                <div className="div-button">
-                    <button className="button-view-more bg-indigo-600 py-3 p-5 rounded-2xl text-white text-xl
-                    transition-transform transform-gpu hover:scale-110 ease-out duration-300">Ver mas</button>
+        <div className="div-first flex flex-wrap gap-x-20 items-center justify-center rounded-xl">
+                <div className="flex flex-col items-center">
+                    <h1 className="h1-olex text-white border-1">OLAX</h1>
+                    <h2 className="h2-kids -mt-8">MAGIC Q8</h2>
+                    <div className="div-button">
+                        <button className="button-view-more bg-indigo-600 py-3 p-5 rounded-2xl text-white text-xl
+                        transition-transform transform-gpu hover:scale-110 ease-out duration-300">Ver mas</button>
+                    </div>
                 </div>
-            </div>
-            <div className="flex justify-center mt-4">
-                <img className="olex-tablet" src={olexKids}/>
-            </div>
+                <div className="div-first-img justify-center mt-4">
+                    <img className="w-full h-full" src={olexKids}/>
+                </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-10 mt-10">
+        <div className="flex flex-wrap items-center justify-center gap-10 mt-16 m-3">
         {
             context.dataProductsHome.map((data, index) => (
                 <ProductsListHome
@@ -52,48 +52,48 @@ const BodyHome = () => {
                     con los demás, la tecnología<br/> es la clave para avanzar en nuestra sociedad cada vez más digital.</p>
             </div>
         </div>
-        <div className="flex items-center justify-center mt-16 mb-32">
-            <div className="w-3/4 -ml-10">
+        <div className="flex items-center justify-center mt-16">
+            <div className="div-image-person w-3/4 -ml-10">
                 <figure>
                     <img className="w-full h-full" src={imgPersona}/>
                 </figure>
             </div>
-            <div className="div-icon flex flex-wrap items-center justify-center gap-10 gap-y-6">
+            <div className="div-two flex flex-wrap items-center justify-center gap-10 gap-y-12 m-5">
                 <div className="w-96 h-36 flex items-center justify-center">
                     <div className="div-text-center">
                         <h1 className="font-bold text-2xl">Atencion al Cliente</h1>
                         <p className="">Reunimos a las personas adecuadas para darte el mas rapido y mejor servicio.</p>
                     </div>
-                    <div className="bg-red-600 w-28 h-16 rounded-2xl px-3" >
+                    <figure className="div-container-icon bg-red-600 w-28 h-16 rounded-2xl p-2">
                         <img className="w-full h-full" src={imgCliente}/>
-                    </div>
+                    </figure>
                 </div>
                 <div className="w-96 h-36 flex items-center justify-center">
                     <div className="div-text-center">
                         <h1 className="font-bold text-2xl">Calidad</h1>
                         <p>Equipos elaborados con tecnologia de punta y los mejores materiales.</p>
                     </div>
-                    <div className="bg-red-600 w-28 h-16 rounded-2xl px-3">
+                    <figure className="bg-red-600 w-28 h-16 rounded-2xl p-2">
                         <img className="w-full h-full" src={imgPulgar}/>
-                    </div>
+                    </figure>
                 </div>
                 <div className="w-96 h-36 flex items-center justify-center">
                     <div className="div-text-center">
                         <h1 className="font-bold text-2xl">Buenos precios</h1>
                         <p>Los mas accesibles y mejores precios que puedes encontrar en el mercado.</p>
                     </div>
-                    <div className="bg-red-600 w-28 h-16 rounded-2xl px-3">
+                    <figure className="bg-red-600 w-28 h-16 rounded-2xl p-2">
                         <img className="w-full h-full" src={imgBajoPrecio}/>
-                    </div>
+                    </figure>
                 </div>
-                <div className="w-96 h-36 flex items-center justify-center">
+                <div className="w-96 h-36 flex  items-center justify-center">
                     <div className="div-text-center">
                         <h1 className="font-bold text-2xl">Horarios flexibles</h1>
                         <p>Puedes contar con nuestro equipo los 365 del año.</p>
                     </div>
-                    <div className="bg-red-600 w-25 h-16 rounded-2xl px-3">
+                    <figure className="bg-red-600 w-28 h-16 rounded-2xl p-1">
                         <img className="w-full h-full" src={imgCalendario}/>
-                    </div>
+                    </figure>
                 </div>
             </div>
         </div>

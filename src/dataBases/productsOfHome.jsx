@@ -1,24 +1,38 @@
 const productsOfHome = [
     {
-        name: 'Olax Prime 12',
-        image: '../products/olax-q12.png',
+        id: 1,
+        name: "Olax Oceania k8",
+        price: 687,
+        category: "Tablets",
+        description: "Tablet Olax Oceanía K8 32gb de rom 3gb de ram Pantalla de 8 pulgadas Cámara de 5.0 Batería de 4000mAh Procesador quad core Android 13 4G LTE B2/3/4/5/8 WCDNA 850/1700/1900 Wifi 6 Colores disponible Negro Azul",
         background: '../img-background/fondo-tlf_1_.avif',
-        imageProduct: '../products/product-op12.png',
-        description: 'Cpu Quad-core, 2 GB de memoria RAM, 32 GB de almacenamiento interno, tenología 4G LTE, cámara trasera 5MP, cámara frontal 8MP, pantalla 5.5 pulgadas, bateria de 2500mAh, sistema operativo android.',
-        ram: '2 GB',
-        rom: '32 GB',
-        camera: '8 MP'
+        images: [
+            "../productsHome/olaxoceank8.webp",
+        ]
     },
     {
-        name: 'Olax Magic Q8',
-        image: '../products/olax-q8.png',
-        background: '../img-background/fondo-tlf.avif'
+        id: 2,
+        name: "Olax Magic Q8",
+        price: 687,
+        category: "Tablets",
+        description: "Tablet Olax Magic Q8 32gb de rom 2 gb de ram Pantalla de 8 pulgadas Cámara de 2.0 Batería de 4000mAh Procesador quad core Android 12 go Wifi 6 Ideal para los más pequeños de la casa Consiste más learning",
+        background: '../img-background/fondo-tlf.avif',
+        images: [
+            "../productsHome/olax-q8.png",
+        ]
     },
     {
-        name: 'Olax AX6 Pro LTE',
-        image: '../products/olax-ax6.png',
-        background: '../img-background/fondo-tlf_3_.avif'
+        id: 3,
+        name: "AX6 Pro 4G LTE",
+        price: 687,
+        category: "Tablets",
+        description: "Olax router 4G LTE AX6 Pro 4G LTE up to 150Mbps Wifi up to 300Mbps 1 Gigabit Ethernet Port Se pueden conectar hasta 32 Dispositivos simultáneos Bateria de 4000 mAh hasta 8 horas de autonomía TTL IMEI Fixed for easy 4G WIFI Sharing",
+        background: '../img-background/fondo-tlf_3_.avif',
+        images: [
+            "../productsHome/olax-ax6.png",
+        ]
     },
+
 ]
 
 export {productsOfHome};

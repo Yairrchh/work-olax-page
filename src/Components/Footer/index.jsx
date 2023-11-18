@@ -40,7 +40,7 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-                <p className="text-white">© 2023 olaxglobal • All Rights Reserved, Elaborado por Yair chira</p>
+                <p className="text-white text-center">© 2023 olaxglobal • All Rights Reserved, Elaborado por Yair chira</p>
             </div>
         </footer>
     )
