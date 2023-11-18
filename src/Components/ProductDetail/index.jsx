@@ -8,7 +8,7 @@ const ProductDetail = () => {
 
     return (
         <aside className={`${context.productDetailOpen ? 'block' : 'hidden'} product-detail bg-white flex flex-col
-        items-center fixed z-50 right-0 rounded-lg w-full`}>
+        items-center fixed z-50 right-0 rounded-lg`}>
             <div className="flex justify-between items-center mt-3">
                 <h2 className="font-medium text-2xl rounded-2xl">Detalles</h2>
                 <div className="cursor-pointer absolute right-0 mr-3" onClick={() => context.closeProductDetail()}>
