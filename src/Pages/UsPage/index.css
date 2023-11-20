@@ -10,7 +10,7 @@
     -webkit-text-stroke: 2px white; /* Propiedad específica para navegadores WebKit (Safari, Chrome) */
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
     .text-effect{
         font-size: 78px;
     }

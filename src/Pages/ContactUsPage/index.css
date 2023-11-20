@@ -26,7 +26,7 @@
     transition: transform .5s, color .3s;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
     .div-contain {
         width: 100%;
     }
