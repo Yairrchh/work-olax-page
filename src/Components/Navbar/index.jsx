@@ -17,7 +17,7 @@ const Navbar = () => {
     const activeStyle = 'underline underline-offset-8 '
 
     return (
-        <nav className={`${isTableOrMobile ? '' : "flex items-center gap-20 font-bold px-10 mt-2"}`}>
+        <nav className={`${isTableOrMobile ? '' : "flex items-center gap-32 font-bold px-10 mt-2"}`}>
             <div className={`${isTableOrMobile ? 'flex justify-center gap-20 items-center mt-2' : 'hidden'}`}>
                 <button className={`${isTableOrMobile ? 'm-1' : 'hidden'}`} onClick={toggleMenu}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className={`${isTableOrMobile ? 'hidden': "w-32 h-32 ml-28"}`}>
                     <img src={iconOlax}/>
                 </div>
-            <ul className={`${isTableOrMobile ? `${isMenuOpen ? 'flex' : 'hidden'} mt-3 flex-col items-center gap-2 ` : 'flex items-center gap-20 font-bold px-10 mr-28' }`}>
+            <ul className={`${isTableOrMobile ? `${isMenuOpen ? 'flex' : 'hidden'} mt-3 flex-col items-center gap-2 ` : 'flex items-center gap-20 font-bold px-10' }`}>
                 <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-110 ease-out duration-300">
                     <NavLink
                     to = "/"
