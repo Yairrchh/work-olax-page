@@ -6,7 +6,7 @@
     border-color: rgba(0, 0, 0, 0.39);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 767px) {
     .product-detail{
         width: 90%;
     }
