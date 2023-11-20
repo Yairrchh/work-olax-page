@@ -8,12 +8,12 @@ import iconMap from "/icon-footer/map-icon.svg"
 const ContactUsPage = () => {
     return (
         <Layout>
-            <div className="div-contact W-full h-3/4 flex flex-col gap-y-12 items-center justify-center rounded-2xl">
+            <div className="div-contacto W-full h-3/4 flex flex-col gap-y-12 items-center justify-center rounded-2xl">
                 <div>
                     <h1 className="text-white text-9xl mt-20 font-extralight">Contactanos</h1>
                 </div>
-                <div>
-                    <p className="text-white text-xl mx-24 mt-10 mb-20 text-center font-light">Embrace Better Life. Innovando el mercado tecnologico. Productos 100% garantizados. Cuenta con OLAX en cualquier lugar y en todo momento.</p>
+                <div className="flex items-center justify-center">
+                    <p className="text-white text-xl w-8/12 mt-10 mb-20 text-center font-light">Embrace Better Life. Innovando el mercado tecnologico. Productos 100% garantizados. Cuenta con OLAX en cualquier lugar y en todo momento.</p>
                 </div>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-3 mt-16">
@@ -45,7 +45,7 @@ const ContactUsPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex items-center justify-center gap-x-40">
+            <div className="div-contact-map flex items-center justify-center gap-x-40 gap-y-5">
                 <form className="bg-white w-11/12 max-w-sm p-8 rounded-lg shadow-lg text-center mt-16">
                     <h1 className="text-black text-4xl mb-6">Contacto</h1>
                     <div className="mt-3 grid gap-4">

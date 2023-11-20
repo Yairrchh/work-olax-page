@@ -53,12 +53,12 @@ const BodyHome = () => {
             </div>
         </div>
         <div className="flex items-center justify-center mt-16">
-            <div className="div-image-person w-3/4 -ml-10">
+            <div className="div-image-person w-10/12 -mr-12">
                 <figure>
                     <img className="w-full h-full" src={imgPersona}/>
                 </figure>
             </div>
-            <div className="div-two flex flex-wrap items-center justify-center gap-10 gap-y-12 m-5">
+            <div className="div-two flex flex-wrap items-center justify-center gap-y-1">
                 <div className="w-96 h-36 flex items-center justify-center">
                     <div className="div-text-center">
                         <h1 className="font-bold text-2xl">Atencion al Cliente</h1>

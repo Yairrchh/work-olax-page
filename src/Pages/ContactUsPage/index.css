@@ -1,4 +1,4 @@
-.div-contact {
+.div-contacto {
     background-image: url('/public/img-background/fondo-contact.jpg');
     background-size: cover;
     background-position: center;
@@ -26,8 +26,14 @@
     transition: transform .5s, color .3s;
 }
 
-@media (max-width: 254px) {
+@media (max-width: 360px) {
     .div-contain {
         width: 100%;
+    }
+    .div-contact-map{
+        flex-wrap: wrap;
+    }
+    .div-contacto h1{
+        font-size: 64px;
     }
 }

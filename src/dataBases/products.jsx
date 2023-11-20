@@ -41,7 +41,7 @@ const products = [
         name: "Hotspot MF950V Elite",
         price: 687,
         category: "routers",
-        description: "Olax MF950V, 150 Mbps 4G LTE Mobile WiFi, Hotspot portátil Desbloqueado Estados Unidos, Venezuela, Canadá América Latina y Caribe hasta 10 dispositivos WiFi 802.11 b/g/n -2.4 GHz, Potente batería: la mejor batería de su clase (2100 mAh) soporta 8 a 10 horas de tiempo de Navegacion.",
+        description: "Olax MF950V Hotspot portátil Desbloqueado Estados Unidos, Venezuela, Canadá América Latina y Caribe hasta 10 dispositivos WiFi 802.11 b/g/n -2.4 GHz, Potente batería: la mejor batería de su clase (2100 mAh) soporta 8 a 10 horas de tiempo de Navegacion.",
         images: [
             "../products/mf950v.webp",
         ]
@@ -81,7 +81,6 @@ const products = [
         images: [
             "../products/oceank10.webp",
             "../products/oceank10(1).webp",
-            "../products/oceank10(2).webp",
         ]
     },
     {

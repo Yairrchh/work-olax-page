@@ -1,7 +1,23 @@
 .product-detail{
     width: 370px;
-    height: 90%;
-    top: 48px;
+    height: 92%;
+    top: 38px;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.39);
+}
+
+@media (max-width: 360px) {
+    .product-detail{
+        width: 90%;
+    }
+    .img-contain{
+        width: 150px;
+        height: 150px;
+    }
+    .div-contain-img{
+        margin-bottom: 0;
+    }
+    .div-detail{
+        margin-bottom: 0;
+    }
 }

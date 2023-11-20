@@ -1,0 +1,21 @@
+.div-nosotro {
+    background-image: url('/public/img-background/OLO2DT0.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.text-effect {
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0); /* Hace el texto completamente transparente */
+    -webkit-text-stroke: 2px white; /* Propiedad específica para navegadores WebKit (Safari, Chrome) */
+}
+
+@media (max-width: 360px) {
+    .text-effect{
+        font-size: 78px;
+    }
+    .text-p{
+        margin: 0;
+        width: 100%;
+    }
+}

@@ -1,4 +1,9 @@
-@media (max-width: 254px) {
+.div-modal{
+    width: 500px;
+    height: 60%;
+}
+
+@media (max-width: 360px) {
     .div-modal {
         width: 100%;
     }
