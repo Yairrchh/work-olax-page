@@ -1,3 +1,4 @@
+import { FormContact } from "../../Components/FormContact";
 import { Layout } from "../../Components/Layout";
 import { Maps } from "../../Components/Maps";
 import './index.css'
@@ -8,7 +9,7 @@ import iconMap from "/icon-footer/map-icon.svg"
 const ContactUsPage = () => {
     return (
         <Layout>
-            <div className="div-contacto W-full h-3/4 flex flex-col gap-y-12 items-center justify-center rounded-2xl">
+            <div className="div-contacto W-full h-3/4 flex flex-col gap-y-12 items-center justify-center rounded-2xl mx-3">
                 <div>
                     <h1 className="text-white text-9xl mt-20 font-extralight">Contactanos</h1>
                 </div>
@@ -28,49 +29,29 @@ const ContactUsPage = () => {
                 </div>
                 <div className="div-contain flex flex-col items-center justify-center gap-3 w-72 h-40 rounded-2xl bg-red-700
                                 transition-transform transform-gpu hover:scale-110 ease-out duration-300">
-                    <figure className=" flex items-center rounded-lg justify-center w-12 h-12 bg-red-700 hover:bg-gray-600">
-                        <img className="w-8 h-8" src={iconEmail}/>
-                    </figure>
+                    <a href="mailto:olaxsolutionsmp@gmail.com"  target="_blank" rel="noopener noreferrer">
+                        <figure className=" flex items-center rounded-lg justify-center w-12 h-12 bg-red-700 hover:bg-gray-600">
+                            <img className="w-8 h-8" src={iconEmail}/>
+                        </figure>
+                    </a>
                     <div>
                         <p className="text-white text-2xl font-light">info@olaxglobal.com</p>
                     </div>
                 </div>
                 <div className="div-contain flex flex-col items-center justify-center gap-3 w-72 h-40 rounded-2xl bg-red-700
                                 transition-transform transform-gpu hover:scale-110 ease-out duration-300">
-                    <figure className=" flex items-center rounded-lg justify-center w-12 h-12 bg-red-700 hover:bg-gray-600">
-                        <img className="w-8 h-8" src={iconMap}/>
-                    </figure>
+                    <a href="https://www.google.com/maps/place/8422+NW+66th+St,+Miami,+FL+33166,+EE.+UU./@25.8332953,-80.3376824,17z/data=!3m1!4b1!4m6!3m5!1s0x88d9bbc6579f5f1b:0x5aed62e370179f3b!8m2!3d25.8332905!4d-80.3351075!16s%2Fg%2F11j0tb0pbm?hl=es&entry=ttu" target="_blank" rel="noopener noreferrer">
+                        <figure className=" flex items-center rounded-lg justify-center w-12 h-12 bg-red-700 hover:bg-gray-600">
+                            <img className="w-8 h-8" src={iconMap}/>
+                        </figure>
+                    </a>
                     <div>
                         <p className="text-white text-2xl font-light text-center">8422 NW 66 St Miami, 33166</p>
                     </div>
                 </div>
             </div>
             <div className="div-contact-map flex items-center justify-center gap-x-40 gap-y-5">
-                <form className="bg-white w-11/12 max-w-sm p-8 rounded-lg shadow-lg text-center mt-16">
-                    <h1 className="text-black text-4xl mb-6">Contacto</h1>
-                    <div className="mt-3 grid gap-4">
-                        <div className="relative">
-                            <input className="form__input cursor-pointer w-full text-sm outline-none px-3 py-3
-                            border-b-2 border-gray-500 border-opacity-40" type="text" placeholder=" "
-                            name="user_name" />
-                            <label className="form__label cursor-pointer absolute top-0 left-1">Name:</label>
-                        </div>
-                        <div className="relative">
-                            <input className="form__input cursor-pointer w-full text-sm outline-none px-3 py-3
-                            border-b-2 border-gray-500 border-opacity-40" placeholder=" " type="email"
-                            name="user_email"/>
-                            <label className="form__label cursor-pointer absolute top-0 left-1">Email</label>
-                        </div>
-                        <div className="relative">
-                            <label>Message</label>
-                            <textarea className="bg-slate-200 w-full p-4 bg-none text-sm outline-none rounded-lg border-b-2
-                            border-gray-500" name="user_message" type="text" cols="30" rows="4"
-                            ></textarea>
-                        </div>
-                    </div>
-                    <button className="text-white rounded-lg mt-10 bg-red-600 px-12 py-1 hover:bg-green-300
-                    hover:text-black hover:ease-in-out duration-300" type="submit">Send</button>
-                </form>
+                <FormContact/>
                 <div>
                     <div className="flex flex-col items-center mb-5">
                         <h1 className="text-2xl font-medium">Horarios</h1>

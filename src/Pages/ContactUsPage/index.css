@@ -2,8 +2,7 @@
     background-image: url('/public/img-background/fondo-contact.webp');
     background-size: cover;
     background-position: center;
-    background-color: #ff333370;
-    background-blend-mode: color;
+    opacity: 0.8;
 }
 
 .div-contain {
