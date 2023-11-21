@@ -98,10 +98,10 @@ const BodyHome = () => {
 
         <div className="div-olax-happy flex flex-col items-center justify-center rounded-2xl m-4 mt-16">
             <section className="flex flex-wrap gap-10 items-center justify-between ">
-                <div className="div-text-h2 w-96 text-white mt-10 text-5xl font-bold m-3">
+                <div className="div-text-h2 w-96 text-black mt-10 text-5xl font-bold m-3">
                     <h2>Con Olax te garantizamos tu felicidad</h2>
                 </div>
-                <div className="div-text-p flex items-center justify-center w-96 mt-10 text-white text-lg font-light m-3">
+                <div className="div-text-p flex items-center justify-center w-96 mt-10 text-black text-lg font-light m-3">
                     <p>Embrace Better Life. Innovando el mercado tecnologico. Productos 100% garantizados. Cuenta con OLAX en cualquier lugar y en todo momento.</p>
                 </div>
             </section>
@@ -111,7 +111,7 @@ const BodyHome = () => {
                         <figure className="flex justify-center rounded-2xl bg-red-800 w-16 h-16 px-2">
                             <img src={iconCheck}/>
                         </figure>
-                        <span className=" text-white mx-4 text-5xl font-bold">100%</span>
+                        <span className=" text-gray-600 mx-4 text-5xl font-bold">100%</span>
                     </div>
                     <span className="text-black text-3xl font-bold">Calidad</span>
                 </div>
@@ -120,7 +120,7 @@ const BodyHome = () => {
                         <figure className="flex justify-center rounded-2xl bg-red-800 w-16 h-16 px-2">
                             <img src={iconPrecio}/>
                         </figure>
-                        <span className=" text-white mx-4 text-5xl font-bold">100%</span>
+                        <span className=" text-gray-600 mx-4 text-5xl font-bold">100%</span>
                     </div>
                     <span className="text-black text-3xl font-bold">Precio</span>
                 </div>
@@ -129,7 +129,7 @@ const BodyHome = () => {
                         <figure className="flex justify-center rounded-2xl bg-red-800 w-16 h-16 px-2">
                             <img src={iconSegurity}/>
                         </figure>
-                        <span className=" text-white mx-4 text-5xl font-bold">100%</span>
+                        <span className=" text-gray-600 mx-4 text-5xl font-bold">100%</span>
                     </div>
                     <span className="text-black text-3xl font-bold">Seguridad</span>
                 </div>
