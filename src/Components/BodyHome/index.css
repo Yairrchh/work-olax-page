@@ -20,12 +20,10 @@
     width: 40%;
 }
 
-
-
 .div-olax-happy{
-    width: 98%;
+    width: 95%;
     height: 100%;
-    background-image: url('/public/img-background/estrechando-manos.jpg');
+    background-image: url('/public/img-background/estrechando-manos.webp');
     background-size: cover;
     background-color: #ff333370;
     background-blend-mode: color;
@@ -60,6 +58,19 @@
         width: 100%;
     }
 
+    .figure-container-icon{
+        margin-top: 15px;
+    }
+
+    .div-text-h2 h2{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .div-text-p p{
+        text-align: center;
+        width: 80%;
+    }
 
     .div-image-person{
         display: none;

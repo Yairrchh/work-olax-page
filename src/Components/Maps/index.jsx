@@ -1,18 +1,18 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-//import L from 'leaflet';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './index.css';
-// import icon from "leaflet/dist/images/marker-icon.png"
-// import iconShadow from "leaflet/dist/images/marker-icon.png"
+import icon from "leaflet/dist/images/marker-icon.png"
+import iconShadow from "leaflet/dist/images/marker-icon.png"
 
-// let iconUbication = new L.icon({
-//     iconUrl : icon,
-//     iconShadow: iconShadow,
-//     iconSize: [60,55],
-//     iconAnchor: [22,94],
-//     shadowAnchor: [22,94],
-//     popupAnchor: [-3,-76]
-// })
+let iconUbication = new L.icon({
+    iconUrl : icon,
+    iconShadow: iconShadow,
+    iconSize: [34,34],
+    iconAnchor: [22,94],
+    shadowAnchor: [22,94],
+    popupAnchor: [-3,-76],
+})
 
 
 const Maps = () => {
@@ -23,7 +23,7 @@ const Maps = () => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={[25.83336, -80.354200]} >
+                <Marker position={[25.83336, -80.354200]} icon={iconUbication}>
                     <Popup>
                     A pretty CSS3 popup. <br /> Easily customizable.
                     </Popup>

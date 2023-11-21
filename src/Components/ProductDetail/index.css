@@ -1,6 +1,6 @@
 .product-detail{
     width: 370px;
-    height: 92%;
+    height: auto;
     top: 38px;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.39);
@@ -8,7 +8,12 @@
 
 @media (max-width: 767px) {
     .product-detail{
-        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 100px;
+        width: 80%;
+        height: auto;
     }
     .img-contain{
         width: 150px;

@@ -16,7 +16,7 @@ const products = [
         name: "Olax fire tv 4K",
         price: 687,
         category: "Routers",
-        description: "",
+        description: "Resolucion de pantalla 4K HDR, asistente de Google, Conexion wifi 2,4 Ghz y 5 Ghz, powerred allwinner, Android TV, 3 meses gratis de Tv.",
         images: [
             "../products/firetv.webp",
             "../products/firetv(1).webp"
@@ -27,7 +27,7 @@ const products = [
         name: "Olax Magic Q8",
         price: 687,
         category: "Tablets",
-        description: "Tablet Olax Magic Q8 32gb de rom 2 gb de ram Pantalla de 8 pulgadas Cámara de 2.0 Batería de 4000mAh Procesador quad core Android 12 go Wifi 6 Ideal para los más pequeños de la casa Consiste más learning.",
+        description: "Tablet Olax Magic Q8 32gb de ROM, ROM expandible hasta 64GB, 2 gb de RAM, Pantalla de 8 pulgadas, Cámara de 2.0, Batería de 4000mAh, Procesador quad core, Android 12 go, Wifi 6 Ideal para los más pequeños de la casa Consiste más learning.",
         images: [
             "../products/olaxmagic.webp",
             "../products/olaxmagic(1).webp",
@@ -51,7 +51,7 @@ const products = [
         name: "Olax Ocean F8",
         price: 687,
         category: "tablets",
-        description: "Tablet Olax Oceanía F8 64gb de rom 4gb de ram Expandible a 8gb Pantalla de 8 pulgadas Cámara de 2.0 Batería de 4000mAh Procesador quad core Android 13 WIFI 6.",
+        description: "Tablet Olax Oceanía F8 64gb de ROM, ROM expandible hasta 64GB, 4gb de RAM, Expandible a 8GB, Pantalla de 8 pulgadas, Cámara de 2.0, Batería de 4000mAh, Procesador quad core, Android 13, WIFI 6.",
         images: [
             "../products/oceanf8.webp",
             "../products/oceanf8(1).webp",
@@ -64,7 +64,7 @@ const products = [
         name: "Olax ocean k8",
         price: 687,
         category: "tablets",
-        description: "Tablet Olax Oceanía K8 32gb de rom 3gb de ram Pantalla de 8 pulgadas, Cámara de 5.0 Batería de 4000mAh Procesador quad core Android 13 4G LTE B2/3/4/5/8 WCDNA 850/1700/1900 Wifi 6.",
+        description: "Tablet Olax Oceanía K8 32GB de ROM, ROM expandible hasta 64GB, 3GB de RAM Pantalla de 8 pulgadas, Cámara de 5.0, Batería de 4000mAh, Procesador quad core, Android 13, 4G LTE B2/3/4/5/8 WCDNA 850/1700/1900, Wifi 6.",
         images: [
             "../products/oceank8.webp",
             "../products/oceank8(1).webp",
@@ -77,7 +77,7 @@ const products = [
         name: "Olax ocean K10",
         price: 687,
         category: "tablets",
-        description: "Tablet Olax Oceanía K10 32gb de rom 2gb de ram Pantalla de 10.1 pulgadas, Cámara de 5.0 Batería de 5000mAh Procesador quad core Android 13 go Wifi 6.",
+        description: "Tablet Olax Oceanía K10 32GB de ROM, ROM expandible hasta 64GB, 2GB de RAM, Pantalla de 10.1 pulgadas, Cámara de 5.0, Batería de 5000mAh, Procesador quad core, Android 13 go, Wifi 6.",
         images: [
             "../products/oceank10.webp",
             "../products/oceank10(1).webp",

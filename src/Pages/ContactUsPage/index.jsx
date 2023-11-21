@@ -74,8 +74,18 @@ const ContactUsPage = () => {
                 <div>
                     <div className="flex flex-col items-center mb-5">
                         <h1 className="text-2xl font-medium">Horarios</h1>
-                        <p className="text-lg font-light mt-3">⏰ Lun-Vi: 9:00 AM - 6:00 PM</p>
-                        <p className="text-lg font-light mt-3">⏰ Sabado: 10:00 AM - 3:00 PM</p>
+                        <div className="flex items-center justify-center mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <p className="text-lg font-light ml-2">Lun-Vi: 9:00 AM - 6:00 PM</p>
+                        </div>
+                        <div className="flex items-center justify-center mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <p className="text-lg font-light ml-2"> Sabado: 10:00 AM - 3:00 PM</p>
+                        </div>
                     </div>
                     <div>
                         <Maps/>

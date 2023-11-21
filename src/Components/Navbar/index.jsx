@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className={`${isTableOrMobile ? 'hidden': "w-32 h-32 ml-28"}`}>
                     <img src={iconOlax}/>
                 </div>
-            <ul className={`${isTableOrMobile ? `${isMenuOpen ? 'flex' : 'hidden'} mt-3 flex-col items-center gap-2 ` : 'flex items-center gap-20 font-bold px-10' }`}>
+            <ul className={`${isTableOrMobile ? `${isMenuOpen ? 'flex' : 'hidden'} mt-3 flex-col items-center gap-3 ` : 'flex items-center gap-20 font-bold px-10' }`}>
                 <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-110 ease-out duration-300">
                     <NavLink
                     to = "/"

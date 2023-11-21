@@ -1,11 +1,11 @@
 import { Layout } from "../../Components/Layout";
-import imguspage from "/img-background/img-uspage.png"
+import imguspage from "/img-background/img-uspage.webp"
 import './index.css'
 
 const UsPage = () => {
     return (
         <Layout>
-            <div className="div-nosotro W-full h-3/4 flex flex-col gap-y-12 items-center justify-center rounded-2xl">
+            <div className="div-nosotro W-full h-3/4 flex flex-col gap-y-12 items-center justify-center rounded-2xl m-4">
                 <div>
                     <h1 className="text-effect mt-14 font-bold">Nosotros</h1>
                 </div>

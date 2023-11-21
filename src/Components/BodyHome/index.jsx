@@ -10,7 +10,7 @@ import imgCliente from "/icon-home/servicio-al-cliente.svg"
 import iconCheck from "/icon-home/icon-check.svg"
 import iconSegurity from "/icon-home/icon-segurity.svg"
 import iconPrecio from "/icon-home/icon-precio.svg"
-import imgPersona from "/img-background/imagen-olax-persona.png"
+import imgPersona from "/img-background/imagen-olax-persona.webp"
 
 const BodyHome = () => {
 
@@ -52,59 +52,57 @@ const BodyHome = () => {
                     con los demás, la tecnología<br/> es la clave para avanzar en nuestra sociedad cada vez más digital.</p>
             </div>
         </div>
-        <div className="flex items-center justify-center mt-16">
-            <div className="div-image-person w-10/12 -mr-12">
-                <figure>
+        <div className="flex items-center mt-16">
+            <figure className="div-image-person w-2/4">
                     <img className="w-full h-full" src={imgPersona}/>
-                </figure>
-            </div>
-            <div className="div-two flex flex-wrap items-center justify-center gap-y-1">
-                <div className="w-96 h-36 flex items-center justify-center">
-                    <div className="div-text-center">
+            </figure>
+            <div className="div-two flex flex-col items-center justify-center gap-y-12">
+                <div className="flex items-center justify-center">
+                    <div className="div-text-center w-72 h-26 mx-3">
                         <h1 className="font-bold text-2xl">Atencion al Cliente</h1>
                         <p className="">Reunimos a las personas adecuadas para darte el mas rapido y mejor servicio.</p>
                     </div>
-                    <figure className="div-container-icon bg-red-600 w-28 h-16 rounded-2xl p-2">
+                    <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
                         <img className="w-full h-full" src={imgCliente}/>
                     </figure>
                 </div>
-                <div className="w-96 h-36 flex items-center justify-center">
-                    <div className="div-text-center">
+                <div className="flex items-center justify-center">
+                    <div className="div-text-center w-72 h-26 mx-3">
                         <h1 className="font-bold text-2xl">Calidad</h1>
                         <p>Equipos elaborados con tecnologia de punta y los mejores materiales.</p>
                     </div>
-                    <figure className="bg-red-600 w-28 h-16 rounded-2xl p-2">
+                    <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
                         <img className="w-full h-full" src={imgPulgar}/>
                     </figure>
                 </div>
-                <div className="w-96 h-36 flex items-center justify-center">
-                    <div className="div-text-center">
+                <div className="flex items-center justify-center">
+                    <div className="div-text-center w-72 h-26 mx-3">
                         <h1 className="font-bold text-2xl">Buenos precios</h1>
                         <p>Los mas accesibles y mejores precios que puedes encontrar en el mercado.</p>
                     </div>
-                    <figure className="bg-red-600 w-28 h-16 rounded-2xl p-2">
+                    <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
                         <img className="w-full h-full" src={imgBajoPrecio}/>
                     </figure>
                 </div>
-                <div className="w-96 h-36 flex  items-center justify-center">
-                    <div className="div-text-center">
+                <div className="flex  items-center justify-center">
+                    <div className="div-text-center w-72 h-26 mx-3">
                         <h1 className="font-bold text-2xl">Horarios flexibles</h1>
                         <p>Puedes contar con nuestro equipo los 365 del año.</p>
                     </div>
-                    <figure className="bg-red-600 w-28 h-16 rounded-2xl p-1">
+                    <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
                         <img className="w-full h-full" src={imgCalendario}/>
                     </figure>
                 </div>
             </div>
         </div>
 
-        <div className="div-olax-happy flex flex-col items-center justify-center rounded-2xl m-3 mt-16">
-            <section className="flex flex-wrap gap-10 items-center justify-between mx-4 sm:mx-8 md:mx-20 lg:mx-32 xl:mx-32">
-                <div className=" text-white mt-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-bold">
-                    <h2>Con Olax te <br/> garantizamos tu <br/> felicidad</h2>
+        <div className="div-olax-happy flex flex-col items-center justify-center rounded-2xl m-4 mt-16">
+            <section className="flex flex-wrap gap-10 items-center justify-between ">
+                <div className="div-text-h2 w-96 text-white mt-10 text-5xl font-bold m-3">
+                    <h2>Con Olax te garantizamos tu felicidad</h2>
                 </div>
-                <div className="mt-10 text-white text-lg font-light">
-                    <p>Embrace Better Life. Innovando el mercado tecnologico. Productos 100% <br/> garantizados. Cuenta con OLAX en cualquier lugar y en todo momento.</p>
+                <div className="div-text-p flex items-center justify-center w-96 mt-10 text-white text-lg font-light m-3">
+                    <p>Embrace Better Life. Innovando el mercado tecnologico. Productos 100% garantizados. Cuenta con OLAX en cualquier lugar y en todo momento.</p>
                 </div>
             </section>
             <section className="flex items-center justify-center flex-wrap gap-10 mt-16 pb-4">
