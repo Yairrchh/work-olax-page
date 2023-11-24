@@ -24,13 +24,17 @@ const Navbar = () => {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                     </svg>
                 </button>
-                <div className="w-24 h-24">
-                    <img className="w-full h-full" src={iconOlax}/>
-                </div>
+                <NavLink to="/">
+                    <div className="w-24 h-24">
+                        <img className="w-full h-full" src={iconOlax}/>
+                    </div>
+                    </NavLink>
             </div>
-            <div className={`${isTableOrMobile ? 'hidden': "w-32 h-32 ml-28"}`}>
-                    <img src={iconOlax}/>
-                </div>
+                <NavLink to="/">
+                    <div className={`${isTableOrMobile ? 'hidden': "w-32 h-32 ml-28"}`}>
+                        <img src={iconOlax}/>
+                    </div>
+                </NavLink>
             <ul className={`${isTableOrMobile ? `${isMenuOpen ? 'flex' : 'hidden'} mt-3 flex-col items-center gap-3 ` : 'flex items-center gap-20 font-bold px-10' }`}>
                 <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-110 ease-out duration-300">
                     <NavLink

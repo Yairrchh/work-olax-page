@@ -1,5 +1,5 @@
 import { Layout } from "../../Components/Layout";
-import imguspage from "/img-background/img-uspage.webp"
+import imguspage from "/img-background/pngegg.png"
 import './index.css'
 
 const UsPage = () => {

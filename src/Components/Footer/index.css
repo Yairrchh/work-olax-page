@@ -5,7 +5,5 @@ footer{
     background-position: center;
     width: 100%;
     height: 100%;
-    margin: 4px;
     border-radius: 30px;
-    z-index: -1;
 }

@@ -10,7 +10,7 @@ import imgCliente from "/icon-home/servicio-al-cliente.svg"
 import iconCheck from "/icon-home/icon-check.svg"
 import iconSegurity from "/icon-home/icon-segurity.svg"
 import iconPrecio from "/icon-home/icon-precio.svg"
-import imgPersona from "/img-background/imagen-olax-persona.webp"
+import imgPersona from "/img-background/pngegg1.png"
 
 const BodyHome = () => {
 
@@ -54,8 +54,8 @@ const BodyHome = () => {
                     con los demás, la tecnología<br/> es la clave para avanzar en nuestra sociedad cada vez más digital.</p>
             </div>
         </div>
-        <div className="flex items-center mt-16">
-            <figure className="div-image-person w-2/4">
+        <div className="flex items-center mt-16 justify-between">
+            <figure className="div-image-person w-5/12">
                     <img className="w-full h-full" src={imgPersona}/>
             </figure>
             <div className="div-two flex flex-col items-center justify-center gap-y-12">
