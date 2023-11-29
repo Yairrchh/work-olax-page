@@ -5,14 +5,14 @@ import { NavLink } from "react-router-dom";
 const ProductHomeVariable = () => {
 
     // product show home variable
-    const  [productShowVariable, setProductShowVariable] = useState(products[0]);
-    const [index, setIndex] = useState(1);
+    const  [productShowVariable, setProductShowVariable] = useState(products[2]);
+    const [index, setIndex] = useState(3);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setProductShowVariable(products[index]);
             setIndex((prevIndex) => (prevIndex + 1) % products.length)
-        }, 3000)
+        }, 4000)
         return () => clearInterval(interval);
     }, [index]);
 
@@ -30,7 +30,7 @@ const ProductHomeVariable = () => {
         <div className="div-first-img">
             <img className="object-cover" src={productShowVariable.images[0]}/>
         </div>
-</div>
+    </div>
     )
 
 }
