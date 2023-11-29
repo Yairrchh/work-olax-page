@@ -1,28 +1,35 @@
 .product-detail{
-    width: 370px;
-    height: auto;
-    top: 38px;
+    width: 95%;
+    height: 95%;
+    top: 20px;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.39);
+}
+
+.img-contain{
+    width: 570px
+}
+
+.ul-list{
+    padding-left: 2rem;
+    background-image: url('/public/products/circulo\ \(1\).png');
+    background-position: 0 0;
+    margin: 15px;
+    background-size: 1.1rem 1.1rem;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 767px) {
     .product-detail{
         display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 100px;
-        width: 80%;
-        height: auto;
-    }
-    .img-contain{
-        width: 150px;
-        height: 150px;
+        flex-wrap: wrap-reverse;
     }
     .div-contain-img{
-        margin-bottom: 0;
+        width: 90%;
+        height: auto;
     }
-    .div-detail{
-        margin-bottom: 0;
+    .ul-list{
+        margin: 0px;
     }
+
 }

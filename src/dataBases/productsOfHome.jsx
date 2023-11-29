@@ -1,10 +1,10 @@
 const productsOfHome = [
     {
         id: 1,
-        name: "Olax Oceania k8",
+        name: "Olax Ocean k8",
         price: 687,
         category: "Tablets",
-        description: "Tablet Olax Oceanía K8 32GB de ROM, ROM expandible hasta 64GB, 3GB de RAM Pantalla de 8 pulgadas, Cámara de 5.0, Batería de 4000mAh, Procesador quad core, Android 13, 4G LTE B2/3/4/5/8 WCDNA 850/1700/1900, Wifi 6.",
+        description: "Tablet Olax Ocean K8 32GB de ROM, ROM expandible hasta 64GB, 3GB de RAM Pantalla de 8 pulgadas, Cámara de 5.0, Batería de 4000mAh, Procesador quad core, Android 13, 4G LTE B2/3/4/5/8 WCDNA 850/1700/1900, Wifi 6.",
         background: '../img-background/fondo-tlf_1_.avif',
         images: [
             "../productsHome/olaxoceank8.webp",

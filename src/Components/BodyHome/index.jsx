@@ -1,8 +1,9 @@
 import { olaxPageContext } from "../../Context";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProductsListHome } from "./ProductsListHome";
+import { products } from "../../dataBases/products";
+import { NavLink } from "react-router-dom";
 import "./index.css"
-import olexKids from "/productsHome/olaxmagicq8.webp"
 import imgBajoPrecio from "/icon-home/bajo-precio.svg"
 import imgCalendario from "/icon-home/calendario-icon.svg"
 import imgPulgar from "/icon-home/pulgar.svg"
@@ -17,21 +18,33 @@ const BodyHome = () => {
     const context = useContext(olaxPageContext)
     //open modal to see product
 
+    // product show home variable
+    const  [productShowVariable, setProductShowVariable] = useState(products[0]);
+    const [index, setIndex] = useState(1);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setProductShowVariable(products[index]);
+            setIndex((prevIndex) => (prevIndex + 1) % products.length)
+        }, 4000)
+        return () => clearInterval(interval);
+    }, [index]);
+
+
     return (
         <>
-        <div className="div-first flex flex-wrap gap-x-20 items-center justify-center rounded-xl">
-                <div className="flex flex-col items-center">
-                    <h1 className="h1-olex text-white border-1">OLAX</h1>
-                    <h2 className="h2-kids -mt-8">MAGIC Q8</h2>
+        <div className="div-first flex flex-wrap gap-x-10 items-center justify-center rounded-xl">
+                <div className="div-container-variable flex flex-col items-center text-center">
+                    <h1 className="h1-olex text-white border-1">{productShowVariable.name}</h1>
                     <div className="div-button">
-                        <a href="https://www.youtube.com/watch?v=o4ffgugJods" target="_blank" rel="noopener noreferrer">
+                        <NavLink to='/products'>
                         <button className="button-view-more bg-indigo-600 py-3 p-5 rounded-2xl text-white text-xl
                         transition-transform transform-gpu hover:scale-110 ease-out duration-300">Ver mas</button>
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
-                <div className="div-first-img justify-center mt-4">
-                    <img className="w-full h-full" src={olexKids}/>
+                <div className="div-first-img">
+                    <img className="object-cover" src={productShowVariable.images[0]}/>
                 </div>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-10 mt-16 m-3">

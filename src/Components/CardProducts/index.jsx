@@ -16,7 +16,6 @@ const CardProducts = () => {
 
     const filteredProductsTablets = filterProductsCategory(listProducts, 'tablets');
     const filteredProductsRouters = filterProductsCategory(listProducts, 'routers')
-    console.log(filteredProductsTablets)
 
     return(
         <div className="div-container rounded-lg mt-10 flex justify-center items-center flex-col">

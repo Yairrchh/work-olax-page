@@ -7,17 +7,15 @@
 }
 
 .h1-olex{
-    font-size: 110px;
+    font-size: 80px;
     font-weight: bolder;
 }
-
-.h2-kids{
-    font-size: 90px;
-    font-weight: bolder;
+.div-container-variable{
+    width: 500px;
 }
 
 .div-first-img {
-    width: 40%;
+    width: 450px;
 }
 
 .div-olax-happy{

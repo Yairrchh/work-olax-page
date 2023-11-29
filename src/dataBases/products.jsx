@@ -4,7 +4,37 @@ const products = [
         name: "Router Olax AC1200",
         price: 687,
         category: "Routers",
-        description: "Router Wifi Olax Ac1200 Funciones Access point, Repetidor, Router Dualband Frecuencias 2.4 GHz, 5 GHz Gigabit Model Scorpio X60 antena de 6DBI largo alcance Velocidad inalámbrica 1200 Mbps.",
+        description: [
+            {
+                name: 'Funcion',
+                property: 'Acces point y repetidor'
+            },
+            {
+                name: 'Frecuencia',
+                property: '2,4 GHz y 5 GHz'
+            },
+            {
+                name: 'Tipo de Frecuencia',
+                property: 'DualBand'
+            },
+            {
+                name: 'Interfaz',
+                property: '3 puertos LAN Gibabit'
+            },
+            {
+                name: 'Modelo',
+                property: 'Scorpio X60'
+            },
+            {
+                name: 'Antena',
+                property: '4x6DBI de largo alcance'
+            },
+            {
+                name: 'Velocidad',
+                property: '1200 Mbpps'
+            }
+
+        ],
         images: [
             "../products/ac120.webp",
             "../products/ac120(1).webp",
@@ -16,7 +46,36 @@ const products = [
         name: "Olax fire tv 4K",
         price: 687,
         category: "Routers",
-        description: "Resolucion de pantalla 4K HDR, asistente de Google, Conexion wifi 2,4 Ghz y 5 Ghz, powerred allwinner, Android TV, 3 meses gratis de Tv.",
+        description: [
+            {
+                name: 'Resolucion de Pantalla',
+                property: '4k HDR'
+            },
+            {
+                name: 'ROM',
+                property: '16GB'
+            },
+            {
+                name: 'RAM',
+                property: '1GB'
+            },
+            {
+                name: 'Conexion',
+                property: '2,4 GHz y 5.0 GHz'
+            },
+            {
+                name: 'Sofware',
+                property: 'Android Tv'
+            },
+            {
+                name: 'Asistente',
+                property: 'Asistente de Goggle'
+            },
+            {
+                name : 'Otros',
+                property: '3 meses gratis de TV'
+            }
+        ],
         images: [
             "../products/firetv.webp",
             "../products/firetv(1).webp"
@@ -27,7 +86,40 @@ const products = [
         name: "Olax Magic Q8",
         price: 687,
         category: "Tablets",
-        description: "Tablet Olax Magic Q8 32gb de ROM, ROM expandible hasta 64GB, 2 gb de RAM, Pantalla de 8 pulgadas, Cámara de 2.0, Batería de 4000mAh, Procesador quad core, Android 12 go, Wifi 6 Ideal para los más pequeños de la casa Consiste más learning.",
+        description: [
+            {
+                name: 'ROM',
+                property: '32GB expandible hasta 64GB'
+            },
+            {
+                name: 'RAM',
+                property: '2GB'
+            },
+            {
+                name: 'Pantalla',
+                property: '8 Pulgadas'
+            },
+            {
+                name: 'Camara',
+                property: '2.0 MP'
+            },
+            {
+                name: 'Bateria',
+                property: '4000mAh'
+            },
+            {
+                name: 'Procesador',
+                property: 'quad core'
+            },
+            {
+                name: 'Software',
+                property: 'Android 12 go'
+            },
+            {
+                name: 'Conectividad',
+                property: 'Wifi 6'
+            }
+        ],
         images: [
             "../products/olaxmagic.webp",
             "../products/olaxmagic(1).webp",
@@ -41,7 +133,36 @@ const products = [
         name: "Hotspot MF950V Elite",
         price: 687,
         category: "routers",
-        description: "Olax MF950V Hotspot portátil Desbloqueado Estados Unidos, Venezuela, Canadá América Latina y Caribe hasta 10 dispositivos WiFi 802.11 b/g/n -2.4 GHz, Potente batería: la mejor batería de su clase (2100 mAh) soporta 8 a 10 horas de tiempo de Navegacion.",
+        description: [
+            {
+                name: 'Funcion',
+                property: 'Modem 4G, Router'
+            },
+            {
+                name: 'Frecuencia',
+                property: '4G LTE 850/1800/2300MHZ'
+            },
+            {
+                name: 'Tipo de frecuencia',
+                property: 'OneBand'
+            },
+            {
+                name: 'Bateria',
+                property: '2100 mAh'
+            },
+            {
+                name: 'Velocidad',
+                property: '150 Mbps'
+            },
+            {
+                name: 'Limite de conexion',
+                property: '10 Dispositivos'
+            },
+            {
+                name: 'Navegacion',
+                property: '8 a 10 Horas'
+            }
+        ],
         images: [
             "../products/mf950v.webp",
         ]
@@ -51,9 +172,41 @@ const products = [
         name: "Olax Ocean F8",
         price: 687,
         category: "tablets",
-        description: "Tablet Olax Oceanía F8 64gb de ROM, ROM expandible hasta 64GB, 4gb de RAM, Expandible a 8GB, Pantalla de 8 pulgadas, Cámara de 2.0, Batería de 4000mAh, Procesador quad core, Android 13, WIFI 6.",
+        description: [
+            {
+                name: 'ROM',
+                property: '64GB expandible hasta 64GB'
+            },
+            {
+                name: 'RAM',
+                property: '4GB expandible a 8GB'
+            },
+            {
+                name: 'Pantalla',
+                property: '8 Pulgadas'
+            },
+            {
+                name: 'Camara',
+                property: '2.0 MP'
+            },
+            {
+                name: 'Bateria',
+                property: '4000mAh'
+            },
+            {
+                name: 'Procesador',
+                property: 'quad core'
+            },
+            {
+                name: 'Software',
+                property: 'Android 13'
+            },
+            {
+                name: 'Conectividad',
+                property: 'Wifi 6'
+            }
+        ],
         images: [
-            "../products/oceanf8.webp",
             "../products/oceanf8(1).webp",
             "../products/oceanf8(2).webp",
             "../products/oceanf8(3).webp",
@@ -64,9 +217,41 @@ const products = [
         name: "Olax ocean k8",
         price: 687,
         category: "tablets",
-        description: "Tablet Olax Oceanía K8 32GB de ROM, ROM expandible hasta 64GB, 3GB de RAM Pantalla de 8 pulgadas, Cámara de 5.0, Batería de 4000mAh, Procesador quad core, Android 13, 4G LTE B2/3/4/5/8 WCDNA 850/1700/1900, Wifi 6.",
+        description: [
+            {
+                name: 'ROM',
+                property: '32GB expandible hasta 64GB'
+            },
+            {
+                name: 'RAM',
+                property: '3GB'
+            },
+            {
+                name: 'Pantalla',
+                property: '8 Pulgadas'
+            },
+            {
+                name: 'Camara',
+                property: '5.0 MP'
+            },
+            {
+                name: 'Bateria',
+                property: '4000mAh'
+            },
+            {
+                name: 'Procesador',
+                property: 'quad core'
+            },
+            {
+                name: 'Software',
+                property: 'Android 13'
+            },
+            {
+                name: 'Conectividad',
+                property: '4G LTE B2/3/4/5/8 WCDNA Wifi 6'
+            }
+        ],
         images: [
-            "../products/oceank8.webp",
             "../products/oceank8(1).webp",
             "../products/oceank8(2).webp",
             "../products/oceank8(3).webp",
@@ -77,7 +262,40 @@ const products = [
         name: "Olax ocean K10",
         price: 687,
         category: "tablets",
-        description: "Tablet Olax Oceanía K10 32GB de ROM, ROM expandible hasta 64GB, 2GB de RAM, Pantalla de 10.1 pulgadas, Cámara de 5.0, Batería de 5000mAh, Procesador quad core, Android 13 go, Wifi 6.",
+        description: [
+            {
+                name: 'ROM',
+                property: '32GB expandible hasta 64GB'
+            },
+            {
+                name: 'RAM',
+                property: '2GB'
+            },
+            {
+                name: 'Pantalla',
+                property: '10.1 Pulgadas'
+            },
+            {
+                name: 'Camara',
+                property: '5.0 MP'
+            },
+            {
+                name: 'Bateria',
+                property: '5000mAh'
+            },
+            {
+                name: 'Procesador',
+                property: 'quad core'
+            },
+            {
+                name: 'Software',
+                property: 'Android 13 go'
+            },
+            {
+                name: 'Conectividad',
+                property: 'Wifi 6'
+            }
+        ],
         images: [
             "../products/oceank10.webp",
             "../products/oceank10(1).webp",
@@ -88,7 +306,40 @@ const products = [
         name: "Router Olax AX6 Pro",
         price: 687,
         category: "routers",
-        description: "Olax router 4G LTE AX6 Pro 4G LTE up to 150Mbps Wifi up to 300Mbps 1 Gigabit Ethernet Port Se pueden conectar hasta 32 Dispositivos simultáneos  Bateria de 4000 mAh hasta 8 horas de autonomía TTL IMEI Fixed for easy 4G WIFI Sharing.",
+        description: [
+            {
+                name: 'Funcion',
+                property: 'Modem 4G Portatil, Router'
+            },
+            {
+                name: 'Frecuencia',
+                property: '4G LTE 850/1800/2300MHZ'
+            },
+            {
+                name: 'Tipo de frecuencia',
+                property: 'OneBand'
+            },
+            {
+                name: 'Bateria',
+                property: '4000 mAh'
+            },
+            {
+                name: 'Velocidad',
+                property: '300 Mbps'
+            },
+            {
+                name: 'Interfaz',
+                property: '1 puertos LAN Gibabit'
+            },
+            {
+                name: 'Limite de conexion',
+                property: '32 Dispositivos'
+            },
+            {
+                name: 'Navegacion',
+                property: '8 a 10 Horas'
+            }
+        ],
         images: [
             "../products/routerax6pro.webp",
             "../products/routerax6pro(1).webp",
