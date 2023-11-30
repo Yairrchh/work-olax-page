@@ -5,6 +5,7 @@
 
 @media (max-width: 767px) {
     .div-modal {
+        margin: 10px;
         width: 100%;
     }
     .div-t-p{

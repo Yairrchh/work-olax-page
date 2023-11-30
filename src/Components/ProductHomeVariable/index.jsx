@@ -7,12 +7,23 @@ const ProductHomeVariable = () => {
     // product show home variable
     const  [productShowVariable, setProductShowVariable] = useState(products[2]);
     const [index, setIndex] = useState(3);
+    //array for preload to images
+    const [preloadedImages, setPreloadedImages] = useState([]);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setProductShowVariable(products[index]);
             setIndex((prevIndex) => (prevIndex + 1) % products.length)
-        }, 4000)
+        }, 4000);
+        //Preloading images to
+        const images = products.map(product => {
+            const img = new Image();
+            img.src = product.images[0];
+            return img;
+        });
+
+        setPreloadedImages(images);
+
         return () => clearInterval(interval);
     }, [index]);
 
@@ -28,7 +39,11 @@ const ProductHomeVariable = () => {
             </div>
         </div>
         <div className="div-first-img">
-            <img className="object-cover" src={productShowVariable.images[0]}/>
+            {
+                preloadedImages.length > 0 && ((
+                    <img className="object-cover" src={productShowVariable.images[0]}/>
+                ))
+            }
         </div>
     </div>
     )
