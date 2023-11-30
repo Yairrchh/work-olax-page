@@ -1,12 +1,12 @@
 .div-modal{
-    width: 500px;
+    width: 490px;
     height: 71%;
 }
 
 @media (max-width: 767px) {
     .div-modal {
         margin: 10px;
-        width: 100%;
+        margin-right: 16px;
     }
     .div-t-p{
         font-size: 14px;
