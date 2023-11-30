@@ -18,10 +18,10 @@ const CardProducts = () => {
     const filteredProductsRouters = filterProductsCategory(listProducts, 'routers')
 
     return(
-        <div className="div-container rounded-lg mt-10 flex justify-center items-center flex-col">
+        <div className="div-container rounded-lg mt-5 flex justify-center items-center flex-col">
             <section>
-                <h1 className="flex items-center text-4xl justify-center text-white mt-10">Tablets</h1>
-                <div className="flex flex-wrap mt-10 justify-center items-center gap-9">
+                <h1 className="flex items-center text-4xl justify-center text-white mt-3">Tablets</h1>
+                <div className="flex flex-wrap mt-5 justify-center items-center gap-9">
                     {
                         filteredProductsTablets.map((data, id) => (
                             <CardProductsList
@@ -34,7 +34,7 @@ const CardProducts = () => {
             </section>
             <section className="mt-10 mb-10">
                 <h1 className="flex items-center text-4xl justify-center text-white">Routers y mas</h1>
-                <div className="flex flex-wrap mt-10 justify-center items-center gap-9">
+                <div className="flex flex-wrap mt-7 justify-center items-center gap-9">
                     {
                         filteredProductsRouters.map((data, id) => (
                             <CardProductsList

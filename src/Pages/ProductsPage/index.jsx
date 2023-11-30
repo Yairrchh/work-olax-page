@@ -8,7 +8,7 @@ const ProductsPage = () => {
             <input
             type="text"
             placeholder="Buscar un producto, modelo y mas"
-            className=" text-center rounded-lg border border-black p-2 w-80 mb-4"
+            className=" text-center rounded-lg border border-black p-2 w-80"
             ></input>
             <CardProducts/>
             <ProductDetail/>

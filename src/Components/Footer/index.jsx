@@ -46,7 +46,9 @@ const Footer = () => {
                 </a>
             </div>
             <div>
+                <a href="https://classy-crepe-8f2013.netlify.app/" target="_blank" rel="noopener noreferrer">
                 <p className="text-white text-center">© 2023 olaxglobal • All Rights Reserved, Elaborado por Yair chira</p>
+                </a>
             </div>
         </footer>
     )
