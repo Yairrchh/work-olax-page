@@ -364,6 +364,10 @@ const products = [
                 property: '6V, 9V, 12V'
             },
             {
+                name: 'Salida USB',
+                property: '5V DC'
+            },
+            {
                 name: 'Bateria',
                 property: '1000 mAh'
             },
@@ -372,12 +376,8 @@ const products = [
                 property: '5 Horas'
             },
             {
-                name: 'Bateria',
-                property: '4000 mAh'
-            },
-            {
                 name: 'Compatibilidad',
-                property: 'Principales marcas de router y modem'
+                property: 'Principales marcas de router y modem.'
             },
         ],
         images: [
