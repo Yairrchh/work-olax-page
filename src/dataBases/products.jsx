@@ -345,6 +345,86 @@ const products = [
             "../products/routerax6pro(1).webp",
         ]
     },
+    {
+        id: 9,
+        name: "OLax Mini DC UPS",
+        price: 687,
+        category: "routers",
+        description: [
+            {
+                name: 'Funcion',
+                property: 'Suministro de energia'
+            },
+            {
+                name: 'Entrada',
+                property: '100-240Vac'
+            },
+            {
+                name: 'Salida',
+                property: '6V, 9V, 12V'
+            },
+            {
+                name: 'Bateria',
+                property: '1000 mAh'
+            },
+            {
+                name: 'Autonomia',
+                property: '5 Horas'
+            },
+            {
+                name: 'Bateria',
+                property: '4000 mAh'
+            },
+            {
+                name: 'Compatibilidad',
+                property: 'Principales marcas de router y modem'
+            },
+        ],
+        images: [
+            "../products/ups.webp",
+            "../products/ups(1).webp",
+        ]
+    },
+    {
+        id: 10,
+        name: "Olax Fire TV 4K S1",
+        price: 687,
+        category: "routers",
+        description: [
+            {
+                name: 'Resolucion de Pantalla',
+                property: '4k HDR 1080P Full HD'
+            },
+            {
+                name: 'ROM',
+                property: '16GB'
+            },
+            {
+                name: 'RAM',
+                property: '1GB'
+            },
+            {
+                name: 'Conexion',
+                property: '2,4 GHz y 5.0 GHz'
+            },
+            {
+                name: 'Sofware',
+                property: 'Android Tv'
+            },
+            {
+                name: 'Asistente',
+                property: 'Asistente de Goggle'
+            },
+            {
+                name : 'Otros',
+                property: '3 meses gratis de TV'
+            }
+        ],
+        images: [
+            "../products/firetvs21.webp",
+            "../products/firetvs21(1).webp",
+        ]
+    },
 ]
 
 export {products};
