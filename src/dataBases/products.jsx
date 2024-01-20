@@ -369,11 +369,11 @@ const products = [
             },
             {
                 name: 'Bateria',
-                property: '1000 mAh'
+                property: '10000 mAh'
             },
             {
                 name: 'Autonomia',
-                property: '5 Horas'
+                property: '8 Horas'
             },
             {
                 name: 'Compatibilidad',
