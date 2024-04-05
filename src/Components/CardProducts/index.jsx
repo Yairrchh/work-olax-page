@@ -20,7 +20,7 @@ const CardProducts = () => {
     return(
         <div className="div-container rounded-lg mt-5 flex justify-center items-center flex-col">
             <section>
-                <h1 className="flex items-center text-4xl justify-center text-white mt-3">Tablets</h1>
+                <h1 className="flex items-center text-4xl justify-center text-white mt-3">Tablets y mas</h1>
                 <div className="flex flex-wrap mt-5 justify-center items-center gap-9">
                     {
                         filteredProductsTablets.map((data, id) => (

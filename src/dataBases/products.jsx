@@ -425,6 +425,129 @@ const products = [
             "../products/firetvs21(1).webp",
         ]
     },
+    {
+        id: 11,
+        name: "Olax K8 Pro",
+        price: 687,
+        category: "tablets",
+        description: [
+            {
+                name: 'ROM',
+                property: '64GB expandible hasta 256GB'
+            },
+            {
+                name: 'RAM',
+                property: '4GB Ampliable a 8GB'
+            },
+            {
+                name: 'Pantalla',
+                property: '8" Pulgadas IPS'
+            },
+            {
+                name: 'Bateria',
+                property: '4000mAh'
+            },
+            {
+                name: 'Procesador',
+                property: 'quad core'
+            },
+            {
+                name: 'Software',
+                property: 'Android 13'
+            },
+            {
+                name: 'Conectividad',
+                property: '4G LTE B2/3/4/5/8 WCDNA Wifi 6'
+            },
+            {
+                name: 'Otros',
+                property: '3 meses de TV gratis, Cober tipo Agenda'
+            },
+        ],
+        images: [
+            "../products/oceank8pro.png",
+        ]
+    },
+    {
+        id: 12,
+        name: "Smart Watch Ultra 8+",
+        price: 687,
+        category: "tablets",
+        description: [
+            {
+                name: 'Accesorios',
+                property: '3 Correas, Audifonos inalambricos'
+            },
+            {
+                name: 'Carga',
+                property: '100% inalambrica'
+            },
+            {
+                name: 'Bluetooth',
+                property: '5.0'
+            },
+            {
+                name: 'Funcionalidad',
+                property: 'Recibir llamadas, mensajes y notificaciones'
+            },
+            {
+                name: 'Salud',
+                property: 'Monitoreo de pulsaciones, ritmo cardicado, presion arterial'
+            },
+            {
+                name : 'Otros',
+                property: 'Cuenta con modo Deporte'
+            }
+        ],
+        images: [
+            "../products/reloj1.png",
+            "../products/reloj2.png",
+            "../products/reloj3.png",
+            "../products/reloj4.png",
+            
+        ]
+    },
+    {
+        id: 13,
+        name: "OLax mini DC UPS",
+        price: 687,
+        category: "routers",
+        description: [
+            {
+                name: 'Funcion',
+                property: 'Suministro de energia'
+            },
+            {
+                name: 'Entrada',
+                property: '100-240Vac'
+            },
+            {
+                name: 'Salida',
+                property: '6V, 9V, 12V'
+            },
+            {
+                name: 'Salida USB',
+                property: '5V DC'
+            },
+            {
+                name: 'Bateria',
+                property: '12000 mAh'
+            },
+            {
+                name: 'Autonomia',
+                property: '10 Horas'
+            },
+            {
+                name: 'Compatibilidad',
+                property: 'Principales marcas de router y modem.'
+            },
+        ],
+        images: [
+            "../products/ups1.png",
+            "../products/ups2.png",
+            
+        ]
+    },
 ]
 
 export {products};
