@@ -523,7 +523,7 @@ const products = [
             },
             {
                 name: 'Tipo de frecuencia',
-                property: 'DualBand'
+                property: 'wifi 6 DualBand'
             },
             {
                 name: 'Interfaz',
@@ -535,7 +535,7 @@ const products = [
             },
             {
                 name: 'Velocidad',
-                property: '1201 mbps'
+                property: '1201 mbps + 574 mbps'
             },
             {
                 name: 'Compatibilidad',
@@ -591,6 +591,50 @@ const products = [
             "../products/advance1.png",
             "../products/advance2.png",
 
+        ]
+    },
+        {
+        id: 15,
+        name: "Router OLAX Scorpio AX3000",
+        price: 687,
+        category: "routers",
+        description: [
+            {
+                name: 'Funcion',
+                property: 'Access point y repetirdor'
+            },
+            {
+                name: 'Frecuencia',
+                property: '2.4 GHz y 5 GHz'
+            },
+            {
+                name: 'Tipo de frecuencia',
+                property: 'Wifi 6 DualBand'
+            },
+            {
+                name: 'Interfaz',
+                property: 'Puerto ETERNET Gigabit'
+            },
+            {
+                name: 'Antena',
+                property: '4x high-again largo alcance'
+            },
+            {
+                name: 'Velocidad',
+                property: '3000 mbps'
+            },
+            {
+                name: 'Compatibilidad',
+                property: 'Principales marcas de router y modem.'
+            },
+        ],
+        images: [
+            "../products/ax3000.png",
+            "../products/ax30001.png",
+            "../products/ax30002.png",
+            "../products/ax30003.png",
+            
+            
         ]
     },
 ]
