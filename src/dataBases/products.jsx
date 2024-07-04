@@ -509,33 +509,33 @@ const products = [
     },
     {
         id: 13,
-        name: "OLax mini DC UPS",
+        name: "Router OLAX Scorpio GX1800 pro",
         price: 687,
         category: "routers",
         description: [
             {
                 name: 'Funcion',
-                property: 'Suministro de energia'
+                property: 'Access point y repetirdor'
             },
             {
-                name: 'Entrada',
-                property: '100-240Vac'
+                name: 'Frecuencia',
+                property: '2.4 GHz y 5 GHz'
             },
             {
-                name: 'Salida',
-                property: '6V, 9V, 12V'
+                name: 'Tipo de frecuencia',
+                property: 'DualBand'
             },
             {
-                name: 'Salida USB',
-                property: '5V DC'
+                name: 'Interfaz',
+                property: 'Puerto ETERNET Gigabit'
             },
             {
-                name: 'Bateria',
-                property: '12000 mAh'
+                name: 'Antena',
+                property: '4x high-again largo alcance'
             },
             {
-                name: 'Autonomia',
-                property: '10 Horas'
+                name: 'Velocidad',
+                property: '1201 mbps'
             },
             {
                 name: 'Compatibilidad',
@@ -543,9 +543,54 @@ const products = [
             },
         ],
         images: [
-            "../products/ups1.png",
-            "../products/ups2.png",
+            "../products/ax1800.png",
+            "../products/ax18002.png",
+            "../products/ax18003.png",
+            "../products/ax18004.png",
             
+            
+        ]
+    },
+    {
+        id: 14,
+        name: "Hotspot MF955V Advanced",
+        price: 687,
+        category: "routers",
+        description: [
+            {
+                name: 'Funcion',
+                property: 'Modem 4G Plus, Router'
+            },
+            {
+                name: 'Frecuencia',
+                property: '4G LTE 850/1800/2300MHZ'
+            },
+            {
+                name: 'Tipo de frecuencia',
+                property: 'OneBand'
+            },
+            {
+                name: 'Bateria',
+                property: '3000 mAh'
+            },
+            {
+                name: 'Velocidad',
+                property: '300 Mbps'
+            },
+            {
+                name: 'Limite de conexion',
+                property: '10 Dispositivos'
+            },
+            {
+                name: 'Navegacion',
+                property: '14 a 16 Horas'
+            }
+        ],
+        images: [
+            "../products/advance.png",
+            "../products/advance1.png",
+            "../products/advance2.png",
+
         ]
     },
 ]
