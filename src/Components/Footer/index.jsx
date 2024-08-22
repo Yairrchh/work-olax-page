@@ -26,7 +26,7 @@ const Footer = () => {
                     <figure className="w-10 h-10 mx-3">
                         <img src={iconllamada}/>
                     </figure>
-                    <span className="text-white">(786) 5565239</span>
+                    <span className="text-white">(786) 8194377</span>
                 </div>
                 <a href="mailto:olaxsolutionsmp@gmail.com"  target="_blank" rel="noopener noreferrer">
                     <div className="flex items-center">
