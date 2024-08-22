@@ -24,7 +24,7 @@ const ContactUsPage = () => {
                         <img className="w-8 h-8" src={iconllamada}/>
                     </figure>
                     <div>
-                        <p className="text-white text-2xl font-light">(786) 5565239</p>
+                        <p className="text-white text-2xl font-light">(786) 8194377</p>
                     </div>
                 </div>
                 <div className="div-contain flex flex-col items-center justify-center gap-3 w-72 h-40 rounded-2xl bg-red-700

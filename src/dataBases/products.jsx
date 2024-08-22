@@ -545,10 +545,7 @@ const products = [
         images: [
             "../products/ax1800.png",
             "../products/ax18002.png",
-            "../products/ax18003.png",
-            "../products/ax18004.png",
-            
-            
+            "../products/ax18003.png",            
         ]
     },
     {
@@ -631,10 +628,54 @@ const products = [
         images: [
             "../products/ax3000.png",
             "../products/ax30001.png",
-            "../products/ax30002.png",
-            "../products/ax30003.png",
-            
-            
+            "../products/ax30002.png",            
+        ]
+    },
+        {
+        id: 16,
+        name: "Magic Q8 Pro",
+        price: 687,
+        category: "tablets",
+        description: [
+            {
+                name: 'ROM',
+                property: '32GB expandible hasta 256GB'
+            },
+            {
+                name: 'RAM',
+                property: '4GB'
+            },
+            {
+                name: 'Pantalla',
+                property: '8" Pulgadas'
+            },
+            {
+                name: 'Bateria',
+                property: '4000mAh'
+            },
+            {
+                name: 'Procesador',
+                property: 'quad core'
+            },
+            {
+                name: 'Software',
+                property: 'Android 12'
+            },
+            {
+                name: 'Conectividad',
+                property: 'Wifi 6'
+            },
+            {
+                name: 'Otros',
+                property: 'Protector de pantalla, cober con sujetador lateral'
+            },
+        ],
+        images: [
+            "../products/q8pro.png",
+            "../products/q8pro1.png",
+            "../products/q8pro2.png",
+            "../products/q8pro3.png",
+
         ]
     },
 ]
