@@ -25,14 +25,3 @@
     transition: transform .5s, color .3s;
 }
 
-@media (max-width: 767px) {
-    .div-contain {
-        width: 100%;
-    }
-    .div-contact-map{
-        flex-wrap: wrap;
-    }
-    .div-contacto h1{
-        font-size: 64px;
-    }
-}

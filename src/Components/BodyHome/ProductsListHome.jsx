@@ -18,7 +18,7 @@ const ProductsListHome = ({data}) => {
         <NavLink to="/products">
         <button className="text-white font-bold bg-red-600 px-10 py-3 rounded-2xl
                             hover:bg-red-400 hover:text-black hover:ease-in-out duration-300"
-                            onClick={() => onOpenModal()}>Ver mas</button>
+                            onClick={() => onOpenModal()}>Ver más</button>
         </NavLink>
         {
             openModalHome && (

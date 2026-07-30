@@ -31,12 +31,10 @@ const BodyHome = () => {
             </div>
             <div className=" div-text flex flex-wrap items-center gap-5 justify-center mt-16">
                 <div className="div-h1-ex">
-                    <h1 className="text-black text-5xl font-bold">Descubre porque la <br/> tecnología es la clave <br/> del éxito de Olax</h1>
+                    <h1 className="text-black text-5xl font-bold">Impulsa el crecimiento<br/> de tu tienda con Olax</h1>
                 </div>
                 <div className="div-p font-light text-lg">
-                    <p className="px-5">En Olax sabemos que la tecnología es una parte fundamental<br/> de nuestras vidas,
-                        Desde la forma en que trabajamos y estudiamos,<br/> hasta la manera en que nos conectamos
-                        con los demás, la tecnología<br/> es la clave para avanzar en nuestra sociedad cada vez más digital.</p>
+                    <p className="px-5">Surte tu negocio con los productos de mayor demanda. <br/> Te ofrecemos un catálogo completo de tecnología mayorista<br/> con inventario garantizado, con los mejores márgenes de ganancia<br/> y atención personalizada para potenciar las ventas de tu comercio.</p>
                 </div>
             </div>
             <div className="flex items-center mt-16 justify-between">
@@ -46,8 +44,8 @@ const BodyHome = () => {
                 <div className="div-two flex flex-col items-center justify-center gap-y-12">
                     <div className="flex items-center justify-center">
                         <div className="div-text-center w-72 h-26 mx-3">
-                            <h1 className="font-bold text-2xl">Atencion al Cliente</h1>
-                            <p className="">Reunimos a las personas adecuadas para darte el mas rapido y mejor servicio.</p>
+                            <h1 className="font-bold text-2xl">Atención al cliente</h1>
+                            <p className="">Reunimos a las personas adecuadas para darte el más rápido y mejor servicio.</p>
                         </div>
                         <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
                             <img className="w-full h-full" src={imgCliente}/>
@@ -56,7 +54,7 @@ const BodyHome = () => {
                     <div className="flex items-center justify-center">
                         <div className="div-text-center w-72 h-26 mx-3">
                             <h1 className="font-bold text-2xl">Calidad</h1>
-                            <p>Equipos elaborados con tecnologia de punta y los mejores materiales.</p>
+                            <p>Equipos elaborados con tecnología de punta y los mejores materiales.</p>
                         </div>
                         <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
                             <img className="w-full h-full" src={imgPulgar}/>
@@ -65,7 +63,7 @@ const BodyHome = () => {
                     <div className="flex items-center justify-center">
                         <div className="div-text-center w-72 h-26 mx-3">
                             <h1 className="font-bold text-2xl">Buenos precios</h1>
-                            <p>Los mas accesibles y mejores precios que puedes encontrar en el mercado.</p>
+                            <p>Los más accesibles y mejores precios que puedes encontrar en el mercado.</p>
                         </div>
                         <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
                             <img className="w-full h-full" src={imgBajoPrecio}/>
@@ -74,7 +72,7 @@ const BodyHome = () => {
                     <div className="flex  items-center justify-center">
                         <div className="div-text-center w-72 h-26 mx-3">
                             <h1 className="font-bold text-2xl">Horarios flexibles</h1>
-                            <p>Puedes contar con nuestro equipo los 365 del año.</p>
+                            <p>Puedes contar con nuestro equipo los 365 días del año.</p>
                         </div>
                         <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
                             <img className="w-full h-full" src={imgCalendario}/>
@@ -89,7 +87,7 @@ const BodyHome = () => {
                         <h2>Con Olax te garantizamos tu felicidad</h2>
                     </div>
                     <div className="div-text-p flex items-center justify-center w-96 mt-10 text-black text-lg font-bold m-3">
-                        <p>Embrace Better Life. Innovando el mercado tecnologico. Productos 100% garantizados. Cuenta con OLAX en cualquier lugar y en todo momento.</p>
+                        <p>Embrace Better Life. Innovando el mercado tecnológico. Productos 100% garantizados. Cuenta con OLAX en cualquier lugar y en todo momento.</p>
                     </div>
                 </section>
                 <section className="flex items-center justify-center flex-wrap gap-10 mt-16 pb-4">

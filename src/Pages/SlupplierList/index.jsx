@@ -1,0 +1,61 @@
+import { Layout } from '../../Components/Layout'
+
+const suppliersData = [
+  { region: 'Caracas', name: 'Pendiente', contact: 'Pendiente' },
+  { region: 'Valencia', name: 'Pendiente', contact: 'Pendiente' },
+  { region: 'Barquisimeto', name: 'Pendiente', contact: 'Pendiente' },
+  { region: 'Maracaibo', name: 'Pendiente', contact: 'Pendiente' },
+  { region: 'Ciudad Guayana', name: 'Pendiente', contact: 'Pendiente' },
+]
+
+const SuppliersPage = () => {
+  return (
+    <Layout>
+      {/* Fondo off-white mate / suave que no encandila */}
+      <section className="w-full bg-[#e8e8e8] text-neutral-800 py-16 px-6 md:px-16 min-h-[85vh]">
+        <div className="max-w-5xl mx-auto">
+          
+          {/* Tag de sección */}
+          <span className="text-red-600 font-bold text-xs md:text-sm tracking-widest uppercase block mb-2">
+            Red de Distribución
+          </span>
+
+          {/* Título */}
+          <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 mb-6">
+            Listado de proveedores
+          </h1>
+
+          {/* Descripción */}
+          <p className="text-neutral-600 text-sm md:text-base leading-relaxed max-w-3xl mb-10">
+            OLAX no trata directamente con tiendas pequeñas: surte a un grupo de grandes proveedores autorizados, y son ellos quienes distribuyen los equipos al resto de tiendas del país. Esta sección conecta a cualquier tienda interesada con el proveedor autorizado más cercano.
+          </p>
+
+          {/* Card / Tabla en un gris claro descansado */}
+          <div className="bg-[#dcdcdc] rounded-2xl border border-neutral-300 overflow-hidden shadow-sm">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-[#cfcfcf] border-b border-neutral-300 text-neutral-600 text-xs font-semibold tracking-wider uppercase">
+                  <th className="py-4 px-6">Región</th>
+                  <th className="py-4 px-6">Proveedor Autorizado</th>
+                  <th className="py-4 px-6">Contacto</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-300 text-sm">
+                {suppliersData.map((item, index) => (
+                  <tr key={index} className="hover:bg-[#d4d4d4] transition-colors">
+                    <td className="py-4 px-6 font-semibold text-neutral-800">{item.region}</td>
+                    <td className="py-4 px-6 text-neutral-600">{item.name}</td>
+                    <td className="py-4 px-6 text-neutral-600">{item.contact}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+    </Layout>
+  )
+}
+
+export { SuppliersPage }

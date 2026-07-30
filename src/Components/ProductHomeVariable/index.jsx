@@ -1,21 +1,26 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { products } from "../../dataBases/products";
 import { NavLink } from "react-router-dom";
 
 const ProductHomeVariable = () => {
-
-    // product show home variable
-    const  [productShowVariable, setProductShowVariable] = useState(products[2]);
+    const [productShowVariable, setProductShowVariable] = useState(products[2]);
     const [index, setIndex] = useState(3);
-    //array for preload to images
     const [preloadedImages, setPreloadedImages] = useState([]);
+    const [isVisible, setIsVisible] = useState(true); // controla el fade
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setProductShowVariable(products[index]);
-            setIndex((prevIndex) => (prevIndex + 1) % products.length)
+            // 1. Empieza a desvanecer la imagen actual
+            setIsVisible(false);
+
+            // 2. Cuando termina el fade-out, cambia la imagen y vuelve a mostrarla
+            setTimeout(() => {
+                setProductShowVariable(products[index]);
+                setIndex((prevIndex) => (prevIndex + 1) % products.length);
+                setIsVisible(true);
+            }, 300); // debe coincidir con la duración de la transición CSS
         }, 4000);
-        //Preloading images to
+
         const images = products.map(product => {
             const img = new Image();
             img.src = product.images[0];
@@ -29,25 +34,32 @@ const ProductHomeVariable = () => {
 
     return (
         <div className="div-first flex flex-wrap gap-x-10 items-center justify-center rounded-xl">
-        <div className="div-container-variable flex flex-col items-center text-center">
-            <h1 className="h1-olex text-white border-1">{productShowVariable.name}</h1>
-            <div className="div-button">
-                <NavLink to='/products'>
-                <button className="button-view-more bg-indigo-600 py-3 p-5 rounded-2xl text-white text-xl
-                transition-transform transform-gpu hover:scale-110 ease-out duration-300">Ver mas</button>
-                </NavLink>
+            <div className="div-container-variable flex flex-col items-center justify-center text-center min-h-[180px] gap-4">
+    <h1 className={`h1-olex text-white border-1 text-2xl sm:text-3xl md:text-4xl font-bold leading-tight line-clamp-2 break-words max-w-[500px] transition-opacity duration-300 ease-in-out ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        {productShowVariable.name}
+    </h1>
+    <div className={`div-button transition-opacity duration-300 ease-in-out ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        <NavLink to='/products'>
+            <button className="button-view-more bg-indigo-600 py-3 p-5 rounded-2xl text-white text-xl
+            transition-transform transform-gpu hover:scale-110 ease-out duration-300">
+                Ver más
+            </button>
+        </NavLink>
+    </div>
+</div>
+
+            <div className="div-first-img w-[400px] h-[400px] flex items-center justify-center overflow-hidden">
+                {
+                    preloadedImages.length > 0 && (
+                        <img
+                            className={`object-cover w-full h-full transition-opacity duration-300 ease-in-out ${isVisible ? "opacity-100" : "opacity-0"}`}
+                            src={productShowVariable.images[0]}
+                        />
+                    )
+                }
             </div>
         </div>
-        <div className="div-first-img">
-            {
-                preloadedImages.length > 0 && ((
-                    <img className="object-cover" src={productShowVariable.images[0]}/>
-                ))
-            }
-        </div>
-    </div>
-    )
+    );
+};
 
-}
-
-export {ProductHomeVariable};
+export { ProductHomeVariable };

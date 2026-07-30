@@ -227,7 +227,7 @@ const products = [
         ],
         images: [
             "../products/image8.jpeg",
-            "../products/image9jpeg",
+            "../products/image9.jpeg",
         ]
     },
     {
