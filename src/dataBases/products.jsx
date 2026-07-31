@@ -4,6 +4,8 @@ const products = [
         name: "Router Olax AC1200",
         price: 687,
         category: "Routers",
+        bestSeller: true,
+        comingSoon: false,
         description: [
             {
                 name: 'Funcion',
@@ -46,6 +48,8 @@ const products = [
         name: "Ocean k11 pro",
         price: 687,
         category: "Tablets",
+        bestSeller: true,
+        comingSoon: false,
         description: [
             {
                 name: 'Resolucion de Pantalla',
@@ -85,6 +89,8 @@ const products = [
         name: "Olax Ax8 pro",
         price: 687,
         category: "Routers",
+        bestSeller: true,
+        comingSoon: false,
         description: [
             {
                 name: 'Funcion',
@@ -124,6 +130,8 @@ const products = [
         name: "Olax smart 10 pro",
         price: 687,
         category: "Tablets",
+        bestSeller: true,
+        comingSoon: false,
         description: [
             {
                 name: 'Accesorios',
@@ -163,6 +171,8 @@ const products = [
         name: "Olax Q1",
         price: 687,
         category: "tablets",
+        bestSeller: false,
+        comingSoon: true,
         description: [
             {
                 name: 'ROM',
@@ -207,6 +217,8 @@ const products = [
         name: "Olax game box",
         price: 687,
         category: "tablets",
+        bestSeller: false,
+        comingSoon: true,
         description: [
             {
                 name: 'Accesorios',
@@ -235,6 +247,8 @@ const products = [
         name: "Kid Scooters",
         price: 687,
         category: "tablets",
+        bestSeller: false,
+        comingSoon: true,
         description: [
             {
                 name: 'Capacidad maxima',
@@ -281,6 +295,8 @@ const products = [
         name: "OLax Mini DC UPS",
         price: 687,
         category: "routers",
+        bestSeller: true,
+        comingSoon: false,
         description: [
             {
                 name: 'Funcion',
@@ -321,6 +337,8 @@ const products = [
         name: "Olax Fire TV 4K S1",
         price: 687,
         category: "routers",
+        bestSeller: false,
+        comingSoon: true,
         description: [
             {
                 name: 'Resolucion de Pantalla',
@@ -361,6 +379,8 @@ const products = [
         name: "Olax K8 Pro",
         price: 687,
         category: "tablets",
+        bestSeller: true,
+        comingSoon: false,
         description: [
             {
                 name: 'ROM',
@@ -404,6 +424,8 @@ const products = [
         name: "Router OLAX Scorpio GX1800 pro",
         price: 687,
         category: "routers",
+        bestSeller: false,
+        comingSoon: true,
         description: [
             {
                 name: 'Funcion',
@@ -445,6 +467,8 @@ const products = [
         name: "Hotspot MF955V Advanced",
         price: 687,
         category: "routers",
+        bestSeller: false,
+        comingSoon: true,
         description: [
             {
                 name: 'Funcion',
@@ -487,6 +511,8 @@ const products = [
         name: "Router OLAX Scorpio AX3000",
         price: 687,
         category: "routers",
+        bestSeller: false,
+        comingSoon: true,
         description: [
             {
                 name: 'Funcion',
@@ -528,6 +554,8 @@ const products = [
         name: "Magic Q8 Pro",
         price: 687,
         category: "tablets",
+        bestSeller: true,
+        comingSoon: false,
         description: [
             {
                 name: 'ROM',

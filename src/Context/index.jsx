@@ -11,16 +11,6 @@ const OlaxPageProvider = ({children}) => {
     //product of product
     const [dataProducts, setDataProducts] = useState([]);
 
-    //Is open product detail
-    const [productDetailOpen, setProductDetailopen] = useState(false);
-    //open and close productDetailopen
-    const openProductDetail = () => setProductDetailopen(true);
-    const closeProductDetail = () => setProductDetailopen(false);
-    //Product show
-    const [productShow, setProductShow] = useState({});
-
-
-
     useEffect(() => {
         setTimeout(() => {
             setDataProductsHome(productsOfHome);
@@ -36,12 +26,6 @@ const OlaxPageProvider = ({children}) => {
                 setDataProductsHome,
                 dataProducts,
                 setDataProducts,
-                productDetailOpen,
-                setProductDetailopen,
-                openProductDetail,
-                closeProductDetail,
-                productShow,
-                setProductShow,
             }}
         >
             {children}

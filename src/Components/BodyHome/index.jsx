@@ -1,6 +1,3 @@
-import { olaxPageContext } from "../../Context";
-import { useContext} from "react";
-import { ProductsListHome } from "./ProductsListHome";
 import "./index.css"
 import imgBajoPrecio from "/icon-home/bajo-precio.svg"
 import imgCalendario from "/icon-home/calendario-icon.svg"
@@ -14,21 +11,11 @@ import { ProductHomeVariable } from "../ProductHomeVariable";
 
 const BodyHome = () => {
 
-    const context = useContext(olaxPageContext)
 
     return (
         <>
             <ProductHomeVariable/>
-            <div className="flex flex-wrap items-center justify-center gap-10 mt-16 m-3">
-            {
-                context.dataProductsHome.map((data, index) => (
-                    <ProductsListHome
-                    data={data}
-                    key={`productList${index}`}
-                    />
-                ))
-            }
-            </div>
+
             <div className=" div-text flex flex-wrap items-center gap-5 justify-center mt-16">
                 <div className="div-h1-ex">
                     <h1 className="text-black text-5xl font-bold">Impulsa el crecimiento<br/> de tu tienda con Olax</h1>
@@ -39,7 +26,7 @@ const BodyHome = () => {
             </div>
             <div className="flex items-center mt-16 justify-between">
                 <figure className="div-image-person w-5/12">
-                        <img className="w-full h-full" src={imgPersona}/>
+                        <img className="w-full h-full" src={imgPersona} loading="lazy"/>
                 </figure>
                 <div className="div-two flex flex-col items-center justify-center gap-y-12">
                     <div className="flex items-center justify-center">
@@ -48,7 +35,7 @@ const BodyHome = () => {
                             <p className="">Reunimos a las personas adecuadas para darte el más rápido y mejor servicio.</p>
                         </div>
                         <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
-                            <img className="w-full h-full" src={imgCliente}/>
+                            <img className="w-full h-full" src={imgCliente} loading="lazy"/>
                         </figure>
                     </div>
                     <div className="flex items-center justify-center">
@@ -57,7 +44,7 @@ const BodyHome = () => {
                             <p>Equipos elaborados con tecnología de punta y los mejores materiales.</p>
                         </div>
                         <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
-                            <img className="w-full h-full" src={imgPulgar}/>
+                            <img className="w-full h-full" src={imgPulgar} loading="lazy"/>
                         </figure>
                     </div>
                     <div className="flex items-center justify-center">
@@ -66,7 +53,7 @@ const BodyHome = () => {
                             <p>Los más accesibles y mejores precios que puedes encontrar en el mercado.</p>
                         </div>
                         <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
-                            <img className="w-full h-full" src={imgBajoPrecio}/>
+                            <img className="w-full h-full" src={imgBajoPrecio} loading="lazy"/>
                         </figure>
                     </div>
                     <div className="flex  items-center justify-center">
@@ -75,7 +62,7 @@ const BodyHome = () => {
                             <p>Puedes contar con nuestro equipo los 365 días del año.</p>
                         </div>
                         <figure className="figure-container-icon bg-red-600 w-20 h-16 rounded-2xl p-2">
-                            <img className="w-full h-full" src={imgCalendario}/>
+                            <img className="w-full h-full" src={imgCalendario} loading="lazy"/>
                         </figure>
                     </div>
                 </div>
@@ -94,7 +81,7 @@ const BodyHome = () => {
                     <div>
                         <div className="flex items-center m-3">
                             <figure className="flex justify-center rounded-2xl bg-red-800 w-16 h-16 px-2">
-                                <img src={iconCheck}/>
+                                <img src={iconCheck} loading="lazy"/>
                             </figure>
                             <span className=" text-black mx-4 text-5xl font-bold">100%</span>
                         </div>
@@ -103,7 +90,7 @@ const BodyHome = () => {
                     <div>
                         <div className="flex items-center m-3">
                             <figure className="flex justify-center rounded-2xl bg-red-800 w-16 h-16 px-2">
-                                <img src={iconPrecio}/>
+                                <img src={iconPrecio} loading="lazy"/>
                             </figure>
                             <span className=" text-black mx-4 text-5xl font-bold">100%</span>
                         </div>
@@ -112,7 +99,7 @@ const BodyHome = () => {
                     <div>
                         <div className="flex items-center m-3">
                             <figure className="flex justify-center rounded-2xl bg-red-800 w-16 h-16 px-2">
-                                <img src={iconSegurity}/>
+                                <img src={iconSegurity} loading="lazy"/>
                             </figure>
                             <span className=" text-black mx-4 text-5xl font-bold">100%</span>
                         </div>

@@ -21,7 +21,7 @@ const ContactUsPage = () => {
                 <div className="div-contain flex flex-col items-center justify-center gap-3 w-full sm:w-72 h-40 rounded-2xl bg-red-700
                                 transition-transform transform-gpu hover:scale-110 ease-out duration-300">
                     <figure className="flex items-center rounded-lg justify-center w-12 h-12 bg-red-700 hover:bg-gray-600">
-                        <img className="w-8 h-8" src={iconllamada} alt="Icono de llamada"/>
+                        <img className="w-8 h-8" src={iconllamada} alt="Icono de llamada" loading="lazy"/>
                     </figure>
                     <div>
                         <p className="text-white text-2xl font-light">(786) 8194377</p>
@@ -31,7 +31,7 @@ const ContactUsPage = () => {
                                 transition-transform transform-gpu hover:scale-110 ease-out duration-300">
                     <a href="mailto:olaxsolutionsmp@gmail.com" target="_blank" rel="noopener noreferrer">
                         <figure className="flex items-center rounded-lg justify-center w-12 h-12 bg-red-700 hover:bg-gray-600">
-                            <img className="w-8 h-8" src={iconEmail} alt="Icono de correo"/>
+                            <img className="w-8 h-8" src={iconEmail} alt="Icono de correo" loading="lazy"/>
                         </figure>
                     </a>
                     <div>
@@ -42,7 +42,7 @@ const ContactUsPage = () => {
                                 transition-transform transform-gpu hover:scale-110 ease-out duration-300">
                     <a href="https://www.google.com/maps/place/8422+NW+66th+St,+Miami,+FL+33166,+EE.+UU./@25.8332953,-80.3376824,17z/data=!3m1!4b1!4m6!3m5!1s0x88d9bbc6579f5f1b:0x5aed62e370179f3b!8m2!3d25.8332905!4d-80.3351075!16s%2Fg%2F11j0tb0pbm?hl=es&entry=ttu" target="_blank" rel="noopener noreferrer">
                         <figure className="flex items-center rounded-lg justify-center w-12 h-12 bg-red-700 hover:bg-gray-600">
-                            <img className="w-8 h-8" src={iconMap} alt="Icono de mapa"/>
+                            <img className="w-8 h-8" src={iconMap} alt="Icono de mapa" loading="lazy"/>
                         </figure>
                     </a>
                     <div>

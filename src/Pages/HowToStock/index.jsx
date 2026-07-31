@@ -23,15 +23,13 @@ const HowToBuySection = () => {
 
   return (
     <Layout>
-            <section className="py-16 px-6 max-w-7xl mx-auto">
+            <section className="pt-6 pb-16 px-6 max-w-7xl mx-auto">
       {/* Encabezado */}
       <div className="mb-12">
         <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-2">
           ¿Cómo surtir con nosotros?
         </h2>
-        <p className="text-gray-600 mt-4 text-base lg:text-lg max-w-3xl">
-          Landing dirigida a los grandes proveedores/tiendas de tecnología que quieran distribuir OLAX directamente. Es el punto de aterrizaje para quien llegue buscando cómo comprar al mayor.
-        </p>
+
       </div>
 
       {/* Pasos en fila con Tailwind Grid / Flex */}
@@ -65,12 +63,12 @@ const HowToBuySection = () => {
       </div>
 
       {/* Botón Call to Action en Bloque Completo (Estilo Diapositiva) */}
-      <div className="w-full">
+      <div className="w-full mt-12 lg:mt-0">
         <NavLink
           to="/contact"
           className="w-full block text-center bg-red-600 text-white font-bold tracking-wider uppercase text-sm lg:text-base py-4 rounded-xl shadow-md hover:bg-red-700 transition-all transform hover:scale-[1.01]"
         >
-          Quiero distribuir OLAX
+          Quiero ser distribuidor autorizado
         </NavLink>
       </div>
     </section>

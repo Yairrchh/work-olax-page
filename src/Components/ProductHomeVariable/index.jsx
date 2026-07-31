@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const ProductHomeVariable = () => {
     const [productShowVariable, setProductShowVariable] = useState(products[2]);
-    const [index, setIndex] = useState(3);
+    const [, setIndex] = useState(3);
     const [preloadedImages, setPreloadedImages] = useState([]);
     const [isVisible, setIsVisible] = useState(true); // controla el fade
 
@@ -15,12 +15,18 @@ const ProductHomeVariable = () => {
 
             // 2. Cuando termina el fade-out, cambia la imagen y vuelve a mostrarla
             setTimeout(() => {
-                setProductShowVariable(products[index]);
-                setIndex((prevIndex) => (prevIndex + 1) % products.length);
+                setIndex((prevIndex) => {
+                    setProductShowVariable(products[prevIndex]);
+                    return (prevIndex + 1) % products.length;
+                });
                 setIsVisible(true);
             }, 300); // debe coincidir con la duración de la transición CSS
         }, 4000);
 
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
         const images = products.map(product => {
             const img = new Image();
             img.src = product.images[0];
@@ -28,9 +34,7 @@ const ProductHomeVariable = () => {
         });
 
         setPreloadedImages(images);
-
-        return () => clearInterval(interval);
-    }, [index]);
+    }, []);
 
     return (
         <div className="div-first flex flex-wrap gap-x-10 items-center justify-center rounded-xl">

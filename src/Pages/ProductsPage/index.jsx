@@ -1,17 +1,12 @@
-import { CardProducts } from "../../Components/CardProducts";
 import { Layout } from "../../Components/Layout";
-import { ProductDetail } from "../../Components/ProductDetail";
+import { BestSellers } from "../../Components/BestSellers";
+import { ComingSoonProducts } from "../../Components/ComingSoonProducts";
 
 const ProductsPage = () => {
     return (
         <Layout>
-            <input
-            type="text"
-            placeholder="Buscar un producto, modelo y mas"
-            className=" text-center rounded-lg border border-black p-2 w-80"
-            ></input>
-            <CardProducts/>
-            <ProductDetail/>
+            <BestSellers/>
+            <ComingSoonProducts/>
         </Layout>
     )
 }

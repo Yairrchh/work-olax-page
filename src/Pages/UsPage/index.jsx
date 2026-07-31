@@ -44,7 +44,7 @@ const UsPage = () => {
                 </div>
                 <div className="w-64 sm:w-80 md:w-96 max-w-full mx-auto">
                     <figure>
-                        <img src={imguspage} alt="Nosotros Olax" className="w-full h-auto" />
+                        <img src={imguspage} alt="Nosotros Olax" className="w-full h-auto" loading="lazy" />
                     </figure>
                 </div>
                 <div className="flex flex-col items-center gap-10">
