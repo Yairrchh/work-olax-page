@@ -20,7 +20,7 @@ const steps = [
 
 const HowToBuyContent = () => {
   return (
-            <section className="pt-6 pb-16 px-6 max-w-7xl mx-auto">
+            <section className="pt-6 pb-2 md:pb-16 px-6 max-w-7xl mx-auto">
       {/* Encabezado */}
       <div className="mb-12">
         <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-2">

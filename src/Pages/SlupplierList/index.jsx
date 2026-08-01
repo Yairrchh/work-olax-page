@@ -11,7 +11,7 @@ const suppliersData = [
 const SuppliersContent = () => {
   return (
       /* Fondo off-white mate / suave que no encandila */
-      <section className="w-full bg-[#e8e8e8] text-neutral-800 py-16 px-6 md:px-16 min-h-[85vh]">
+      <section className="w-full bg-[#e8e8e8] text-neutral-800 pt-3 pb-8 md:py-16 px-6 md:px-16 md:min-h-[85vh]">
         <div className="max-w-5xl mx-auto">
           
           {/* Tag de sección */}

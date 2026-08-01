@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { products } from "../../dataBases/products";
 import { NavLink } from "react-router-dom";
+import "./index.css";
 
 const ProductHomeVariable = () => {
     const [productShowVariable, setProductShowVariable] = useState(products[2]);

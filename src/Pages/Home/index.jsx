@@ -5,6 +5,7 @@ import { BestSellers } from "../../Components/BestSellers";
 import { ComingSoonProducts } from "../../Components/ComingSoonProducts";
 import { HowToBuyContent } from "../HowToStock";
 import { SuppliersContent } from "../SlupplierList";
+import { ContactUsContent } from "../ContactUsPage";
 import { UsPageContent } from "../UsPage";
 
 const Home = () => {
@@ -14,13 +15,14 @@ const Home = () => {
         <Layout>
             <BodyHome/>
             {isMobile && (
-                <>
-                    <BestSellers/>
-                    <ComingSoonProducts/>
+                <div className="flex flex-col gap-y-12 w-full">
                     <HowToBuyContent/>
                     <SuppliersContent/>
+                    <BestSellers/>
+                    <ComingSoonProducts/>
+                    <ContactUsContent/>
                     <UsPageContent/>
-                </>
+                </div>
             )}
         </Layout>
     )

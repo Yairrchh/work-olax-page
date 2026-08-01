@@ -7,14 +7,14 @@ import iconCheck from "/icon-home/icon-check.svg"
 import iconSegurity from "/icon-home/icon-segurity.svg"
 import iconPrecio from "/icon-home/icon-precio.svg"
 import imgPersona from "/img-background/pngegg1.png"
-import { ProductHomeVariable } from "../ProductHomeVariable";
+// import { ProductHomeVariable } from "../ProductHomeVariable";
 
 const BodyHome = () => {
 
 
     return (
         <>
-            <ProductHomeVariable/>
+            {/* <ProductHomeVariable/> */}
 
             <div className=" div-text flex flex-wrap items-center gap-2 md:gap-5 justify-center mt-8 md:mt-16">
                 <div className="div-h1-ex">
@@ -74,11 +74,11 @@ const BodyHome = () => {
                         <h2>Con Olax te garantizamos tu felicidad</h2>
                     </div>
                     <div className="div-text-p flex items-center justify-center w-full md:w-96 mt-2 md:mt-10 text-black text-sm md:text-lg font-bold m-0 md:m-3">
-                        <p className="text-center md:text-left">Embrace Better Life. Innovando el mercado tecnológico. Productos 100% garantizados. Cuenta con OLAX en cualquier lugar y en todo momento.</p>
+                        <p className="text-center md:text-left">Innovando el mercado tecnológico. Productos 100% garantizados. Cuenta con OLAX en cualquier lugar y en todo momento.</p>
                     </div>
                 </section>
                 <section className="flex items-center justify-center flex-wrap gap-3 md:gap-10 mt-2 md:mt-16 pb-6 md:pb-4">
-                    <div>
+                    <div className="flex flex-col items-center">
                         <div className="flex items-center m-2 md:m-3">
                             <figure className="flex justify-center rounded-2xl bg-red-800 w-10 h-10 md:w-16 md:h-16 p-2">
                                 <img src={iconCheck} loading="lazy"/>
@@ -87,7 +87,7 @@ const BodyHome = () => {
                         </div>
                         <span className="text-black text-lg md:text-3xl font-bold">Calidad</span>
                     </div>
-                    <div>
+                    <div className="flex flex-col items-center">
                         <div className="flex items-center m-2 md:m-3">
                             <figure className="flex justify-center rounded-2xl bg-red-800 w-10 h-10 md:w-16 md:h-16 p-2">
                                 <img src={iconPrecio} loading="lazy"/>
@@ -96,7 +96,7 @@ const BodyHome = () => {
                         </div>
                         <span className="text-black text-lg md:text-3xl font-bold">Precio</span>
                     </div>
-                    <div>
+                    <div className="flex flex-col items-center">
                         <div className="flex items-center m-2 md:m-3">
                             <figure className="flex justify-center rounded-2xl bg-red-800 w-10 h-10 md:w-16 md:h-16 p-2">
                                 <img src={iconSegurity} loading="lazy"/>
