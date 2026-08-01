@@ -152,8 +152,10 @@ const Navbar = () => {
 
             {/* Botón flotante de WhatsApp - solo mobile/tablet, arrastrable */}
             {isTableOrMobile && whatsappPosition && (
-                <NavLink
-                    to="/contact"
+                <a
+                    href="https://wa.link/nqo33g"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Contáctanos por WhatsApp"
                     onPointerDown={handlePointerDown}
                     onPointerMove={handlePointerMove}
@@ -163,7 +165,7 @@ const Navbar = () => {
                     className="fixed z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg flex items-center justify-center hover:bg-[#1fb659] transition-transform transform-gpu hover:scale-110 ease-out duration-300 cursor-grab active:cursor-grabbing"
                 >
                     <WhatsappIcon className="w-7 h-7" />
-                </NavLink>
+                </a>
             )}
 
             {/* Barra de navegación inferior fija - solo mobile/tablet */}

@@ -16,11 +16,11 @@ const BodyHome = () => {
         <>
             <ProductHomeVariable/>
 
-            <div className=" div-text flex flex-wrap items-center gap-5 justify-center mt-16">
+            <div className=" div-text flex flex-wrap items-center gap-2 md:gap-5 justify-center mt-8 md:mt-16">
                 <div className="div-h1-ex">
-                    <h1 className="text-black text-5xl font-bold">Impulsa el crecimiento<br/> de tu tienda con Olax</h1>
+                    <h1 className="text-black text-2xl md:text-5xl font-bold">Impulsa el crecimiento<br/> de tu tienda con Olax</h1>
                 </div>
-                <div className="div-p font-light text-lg">
+                <div className="div-p font-light text-sm md:text-lg">
                     <p className="px-5">Surte tu negocio con los productos de mayor demanda. <br className="hidden md:inline"/> Te ofrecemos un catálogo completo de tecnología mayorista<br className="hidden md:inline"/> con inventario garantizado, con los mejores márgenes de ganancia<br className="hidden md:inline"/> y atención personalizada para potenciar las ventas de tu comercio.</p>
                 </div>
             </div>
@@ -30,38 +30,38 @@ const BodyHome = () => {
                 </figure>
                 <div className="div-two grid grid-cols-2 gap-x-4 gap-y-6 w-full md:flex md:flex-col md:w-auto md:items-center md:justify-center md:gap-y-12">
                     <div className="flex flex-col items-center text-center md:flex-row md:items-center md:justify-center">
-                        <div className="div-text-center min-h-[92px] md:min-h-0 md:w-72 md:h-26 md:mx-3">
+                        <div className="div-text-center order-2 md:order-1 min-h-[92px] md:min-h-0 md:w-72 md:h-26 md:mx-3">
                             <h1 className="font-bold text-sm md:text-2xl">Atención al cliente</h1>
                             <p className="text-xs mt-1 md:text-base md:mt-0">Reunimos a las personas adecuadas para darte el más rápido y mejor servicio.</p>
                         </div>
-                        <figure className="figure-container-icon bg-red-600 w-10 h-10 rounded-xl p-2 mt-2 md:w-20 md:h-16 md:rounded-2xl md:mt-0">
+                        <figure className="figure-container-icon order-1 md:order-2 bg-red-600 w-10 h-10 rounded-xl p-2 mb-2 mt-0 md:w-20 md:h-16 md:rounded-2xl md:mb-0 md:mt-0">
                             <img className="w-full h-full" src={imgCliente} loading="lazy"/>
                         </figure>
                     </div>
                     <div className="flex flex-col items-center text-center md:flex-row md:items-center md:justify-center">
-                        <div className="div-text-center min-h-[92px] md:min-h-0 md:w-72 md:h-26 md:mx-3">
+                        <div className="div-text-center order-2 md:order-1 min-h-[92px] md:min-h-0 md:w-72 md:h-26 md:mx-3">
                             <h1 className="font-bold text-sm md:text-2xl">Calidad</h1>
                             <p className="text-xs mt-1 md:text-base md:mt-0">Equipos elaborados con tecnología de punta y los mejores materiales.</p>
                         </div>
-                        <figure className="figure-container-icon bg-red-600 w-10 h-10 rounded-xl p-2 mt-2 md:w-20 md:h-16 md:rounded-2xl md:mt-0">
+                        <figure className="figure-container-icon order-1 md:order-2 bg-red-600 w-10 h-10 rounded-xl p-2 mb-2 mt-0 md:w-20 md:h-16 md:rounded-2xl md:mb-0 md:mt-0">
                             <img className="w-full h-full" src={imgPulgar} loading="lazy"/>
                         </figure>
                     </div>
                     <div className="flex flex-col items-center text-center md:flex-row md:items-center md:justify-center">
-                        <div className="div-text-center min-h-[92px] md:min-h-0 md:w-72 md:h-26 md:mx-3">
+                        <div className="div-text-center order-2 md:order-1 min-h-[92px] md:min-h-0 md:w-72 md:h-26 md:mx-3">
                             <h1 className="font-bold text-sm md:text-2xl">Buenos precios</h1>
                             <p className="text-xs mt-1 md:text-base md:mt-0">Los más accesibles y mejores precios que puedes encontrar en el mercado.</p>
                         </div>
-                        <figure className="figure-container-icon bg-red-600 w-10 h-10 rounded-xl p-2 mt-2 md:w-20 md:h-16 md:rounded-2xl md:mt-0">
+                        <figure className="figure-container-icon order-1 md:order-2 bg-red-600 w-10 h-10 rounded-xl p-2 mb-2 mt-0 md:w-20 md:h-16 md:rounded-2xl md:mb-0 md:mt-0">
                             <img className="w-full h-full" src={imgBajoPrecio} loading="lazy"/>
                         </figure>
                     </div>
                     <div className="flex flex-col items-center text-center md:flex-row md:items-center md:justify-center">
-                        <div className="div-text-center min-h-[92px] md:min-h-0 md:w-72 md:h-26 md:mx-3">
+                        <div className="div-text-center order-2 md:order-1 min-h-[92px] md:min-h-0 md:w-72 md:h-26 md:mx-3">
                             <h1 className="font-bold text-sm md:text-2xl">Horarios flexibles</h1>
                             <p className="text-xs mt-1 md:text-base md:mt-0">Puedes contar con nuestro equipo los 365 días del año.</p>
                         </div>
-                        <figure className="figure-container-icon bg-red-600 w-10 h-10 rounded-xl p-2 mt-2 md:w-20 md:h-16 md:rounded-2xl md:mt-0">
+                        <figure className="figure-container-icon order-1 md:order-2 bg-red-600 w-10 h-10 rounded-xl p-2 mb-2 mt-0 md:w-20 md:h-16 md:rounded-2xl md:mb-0 md:mt-0">
                             <img className="w-full h-full" src={imgCalendario} loading="lazy"/>
                         </figure>
                     </div>

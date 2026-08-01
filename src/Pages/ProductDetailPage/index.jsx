@@ -160,12 +160,14 @@ const ProductDetailPage = () => {
                         Volver atrás
                     </button>
                     <div className="grid grid-cols-2 sm:flex gap-2 sm:gap-3">
-                        <button
-                            onClick={() => navigate("/contact")}
-                            className="bg-red-600 text-white font-semibold rounded-xl px-3 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm hover:bg-red-700 transition-transform transform-gpu hover:scale-105 ease-out duration-300 cursor-pointer"
+                        <a
+                            href="https://wa.link/nqo33g"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-red-600 text-white font-semibold rounded-xl px-3 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm hover:bg-red-700 transition-transform transform-gpu hover:scale-105 ease-out duration-300 cursor-pointer text-center"
                         >
                             Cotizar producto al gran mayor
-                        </button>
+                        </a>
                         <button
                             onClick={() => navigate("/suppliers-list")}
                             className="bg-red-600 text-white font-semibold rounded-xl px-3 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm hover:bg-red-700 transition-transform transform-gpu hover:scale-105 ease-out duration-300 cursor-pointer"
