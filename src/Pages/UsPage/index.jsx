@@ -15,7 +15,7 @@ const UsPageContent = () => {
             </div>
             <div className="grid grid-cols-2 gap-x-4 gap-y-6 mt-6 md:flex md:flex-row md:flex-wrap md:items-center md:justify-center md:gap-0 md:mt-10">
                 <div className="contents md:flex md:flex-col md:items-center md:gap-10">
-                    <div className="flex flex-col items-center justify-center m-0 md:m-5">
+                    <div className="flex flex-col items-center justify-start self-start md:justify-center md:self-auto m-0 md:m-5">
                         <figure className="w-10 h-10 md:w-16 md:h-12 flex items-center justify-center bg-red-700 rounded-lg">
                         <svg className="w-6 h-6 md:w-11 md:h-11" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_27_265)">
@@ -33,7 +33,7 @@ const UsPageContent = () => {
                         </figure>
                         <p className="font-semibold text-sm md:text-2xl text-center">Personal capacitado y profesional</p>
                     </div>
-                    <div className="flex flex-col items-center justify-center m-0 md:m-5">
+                    <div className="flex flex-col items-center justify-start self-start md:justify-center md:self-auto m-0 md:m-5">
                         <figure className="w-10 h-10 md:w-16 md:h-12 flex items-center justify-center bg-red-700 rounded-lg">
                             <svg className="w-6 h-6 md:w-11 md:h-11" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M15.774 4.38807L15 8H20C21.6569 8 23 9.34315 23 11V14.0557C23 14.6767 22.8554 15.2892 22.5777 15.8446L20.8292 19.3416C20.321 20.358 19.2822 21 18.1459 21H4C2.89543 21 2 20.1046 2 19V11C2 9.89543 2.89543 9 4 9H7L11.4514 1.87769C11.7927 1.33169 12.3911 1 13.035 1C14.8184 1 16.1476 2.64432 15.774 4.38807ZM7 11H4L4 19H7V11ZM19.0403 18.4472C18.8709 18.786 18.5247 19 18.1459 19H9V9.57359L13.1065 3.00312C13.58 3.04459 13.9202 3.4939 13.8184 3.96901L13.0444 7.58094C12.9178 8.17152 13.065 8.78766 13.4447 9.25736C13.8244 9.72705 14.396 10 15 10H20C20.5523 10 21 10.4477 21 11V14.0557C21 14.3662 20.9277 14.6724 20.7889 14.9502L19.0403 18.4472Z" fill="white"/>
@@ -48,7 +48,7 @@ const UsPageContent = () => {
                     </figure>
                 </div>
                 <div className="contents md:flex md:flex-col md:items-center md:gap-10">
-                    <div className="flex flex-col items-center justify-center m-0 md:m-5">
+                    <div className="flex flex-col items-center justify-start self-start md:justify-center md:self-auto m-0 md:m-5">
                         <figure className="w-10 h-10 md:w-16 md:h-12 flex items-center justify-center bg-red-700 rounded-lg">
                         <svg className="w-6 h-6 md:w-11 md:h-11" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M16.7878 11.8383C15.8536 12.2387 14.7677 11.8747 14.2635 10.9923L11.9999 7.03116L9.73643 10.9923C9.23218 11.8747 8.14628 12.2387 7.2121 11.8383L3.5247 10.258L4.71578 18L19.2841 18L20.4752 10.258L16.7878 11.8383ZM22.1718 7.35495C22.5325 7.20035 22.9226 7.50264 22.8629 7.89055L21.2608 18.3041C21.1107 19.2798 20.2712 20 19.2841 20H4.71578C3.72864 20 2.88914 19.2798 2.73904 18.3041L1.13695 7.89055C1.07727 7.50264 1.46735 7.20035 1.82809 7.35495L7.99994 10L11.5658 3.75974C11.7578 3.42384 12.2421 3.42384 12.4341 3.75974L15.9999 10L22.1718 7.35495Z" fill="white"/>
@@ -56,7 +56,7 @@ const UsPageContent = () => {
                         </figure>
                         <p className="font-semibold text-sm md:text-2xl text-center">La mejor calidad y mejores precios</p>
                     </div>
-                    <div className="flex flex-col items-center justify-center m-0 md:m-5">
+                    <div className="flex flex-col items-center justify-start self-start md:justify-center md:self-auto m-0 md:m-5">
                         <figure className="w-10 h-10 md:w-16 md:h-12 flex items-center justify-center bg-red-700 rounded-lg">
                             <svg className="w-6 h-6 md:w-11 md:h-11" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M21.0047 21.342C21.6329 20.8043 21.9962 20.02 22 19.1931V16.1795C22 15.3021 21.4281 14.5272 20.5898 14.2685L17.1131 13.1956C16.4856 13.002 15.8031 13.1287 15.2869 13.5346L13.8995 14.6258C13.0354 14.0205 12.2118 13.3319 11.4399 12.5601C10.6681 11.7882 9.97951 10.9646 9.37419 10.1005L10.4654 8.71309C10.8713 8.19694 10.998 7.5144 10.8044 6.88693L9.73153 3.41025C9.47281 2.57186 8.69786 2 7.82046 2H4.8069C3.98001 2.00381 3.19565 2.3671 2.65797 2.99532C2.21357 3.51456 1.96206 4.17697 2.00467 4.85909C2.27326 9.15824 4.04992 13.3803 7.33479 16.6652C10.6197 19.9501 14.8418 21.7267 19.1409 21.9953C19.823 22.0379 20.4854 21.7864 21.0047 21.342ZM7.80217 8.86404C7.257 9.55719 7.23015 10.5256 7.73607 11.2479C8.40782 12.2069 9.17126 13.1198 10.0257 13.9743C10.8802 14.8287 11.7931 15.5922 12.7521 16.2639C13.4744 16.7698 14.4428 16.743 15.136 16.1978L16.5233 15.1067L20 16.1795V19.1872C19.9979 19.4317 19.8901 19.6635 19.7042 19.8226C19.5325 19.9695 19.3695 20.0057 19.2656 19.9992C15.434 19.7598 11.6762 18.1782 8.749 15.251C5.82181 12.3238 4.24016 8.56596 4.00078 4.73438C3.99429 4.63048 4.03046 4.46752 4.17743 4.2958C4.33653 4.10991 4.5683 4.00206 4.81287 4H7.82046L8.89334 7.47667L7.80217 8.86404Z" fill="white"/>
