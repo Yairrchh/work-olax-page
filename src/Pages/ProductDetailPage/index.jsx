@@ -87,7 +87,8 @@ const ProductDetailPage = () => {
                     Volver
                 </button>
 
-                <div className="detail-card bg-white border border-gray-100 rounded-3xl shadow-sm mt-4 p-6 sm:p-10 flex flex-col lg:flex-row gap-10">
+                <div className="detail-card bg-white border border-gray-100 rounded-3xl shadow-sm mt-4 p-6 sm:p-10">
+                <div className="flex flex-col lg:flex-row gap-10">
                     <div className="flex-1">
                         <div className="detail-main-image relative rounded-2xl bg-gray-50 flex items-center justify-center overflow-hidden">
                             {product.images.length > 1 && (
@@ -137,7 +138,7 @@ const ProductDetailPage = () => {
                             {product.description?.map((spec) => `${spec.name}: ${spec.property}`).join(". ")}
                         </p>
 
-                        <div className="trust-panel bg-slate-500 rounded-2xl px-6 py-5 mt-auto mb-6">
+                        <div className="trust-panel bg-slate-500 rounded-2xl px-6 py-5 mt-auto">
                             <p className="text-xs text-center font-semibold uppercase tracking-wide text-red-500 mb-4">Por qué comprar con nosotros</p>
                             <div className="grid grid-cols-3 gap-3">
                                 {trustPoints.map(({ icon: Icon, label }) => (
@@ -148,22 +149,31 @@ const ProductDetailPage = () => {
                                 ))}
                             </div>
                         </div>
-
-                        <div className="flex items-center gap-3">
-                            <button
-                                onClick={() => navigate(-1)}
-                                className="border border-gray-300 text-gray-700 font-semibold rounded-xl px-6 py-3 hover:border-red-600 hover:text-red-600 transition-colors cursor-pointer"
-                            >
-                                Volver atrás
-                            </button>
-                            <button
-                                onClick={() => navigate("/contact")}
-                                className="bg-red-600 text-white font-semibold rounded-xl px-8 py-3 hover:bg-red-700 transition-transform transform-gpu hover:scale-105 ease-out duration-300 cursor-pointer"
-                            >
-                                Cotizar producto
-                            </button>
-                        </div>
                     </div>
+                </div>
+
+                <div className="flex flex-col-reverse items-start sm:flex-row sm:items-center sm:justify-between gap-3 mt-8">
+                    <button
+                        onClick={() => navigate(-1)}
+                        className="border border-gray-300 text-gray-700 font-semibold rounded-xl px-6 py-3 hover:border-red-600 hover:text-red-600 transition-colors cursor-pointer"
+                    >
+                        Volver atrás
+                    </button>
+                    <div className="grid grid-cols-2 sm:flex gap-2 sm:gap-3">
+                        <button
+                            onClick={() => navigate("/contact")}
+                            className="bg-red-600 text-white font-semibold rounded-xl px-3 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm hover:bg-red-700 transition-transform transform-gpu hover:scale-105 ease-out duration-300 cursor-pointer"
+                        >
+                            Cotizar producto al gran mayor
+                        </button>
+                        <button
+                            onClick={() => navigate("/suppliers-list")}
+                            className="bg-red-600 text-white font-semibold rounded-xl px-3 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm hover:bg-red-700 transition-transform transform-gpu hover:scale-105 ease-out duration-300 cursor-pointer"
+                        >
+                            Cotizar producto al mayor
+                        </button>
+                    </div>
+                </div>
                 </div>
             </div>
         </Layout>

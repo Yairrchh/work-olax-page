@@ -32,9 +32,9 @@ const FormContact = () => {
     }
 
     return (
-        <form className="bg-white w-11/12 max-w-sm p-8 rounded-lg shadow-lg text-center mt-16" onSubmit={sendEmail}>
-            <h1 className="text-black text-4xl mb-6">Contacto</h1>
-            <div className="mt-3 grid gap-4">
+        <form className="bg-white w-11/12 max-w-sm p-5 md:p-8 rounded-lg shadow-lg text-center mt-4 md:mt-16" onSubmit={sendEmail}>
+            <h1 className="text-black text-2xl md:text-4xl mb-3 md:mb-6">Contacto</h1>
+            <div className="mt-3 grid gap-3 md:gap-4">
                 <div className="relative">
                     <input className="form__input cursor-pointer w-full text-sm outline-none px-3 py-3
                     border-b-2 border-gray-500 border-opacity-40" type="text" placeholder=" "
@@ -55,7 +55,7 @@ const FormContact = () => {
                     ></textarea>
                 </div>
             </div>
-            <button className="text-white rounded-lg mt-10 bg-red-600 px-12 py-1 hover:bg-green-300
+            <button className="text-white rounded-lg mt-5 md:mt-10 bg-red-600 px-12 py-1 hover:bg-green-300
             hover:text-black hover:ease-in-out duration-300" type="submit">Send</button>
         </form>
     )

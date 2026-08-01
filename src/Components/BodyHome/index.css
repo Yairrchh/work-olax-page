@@ -14,10 +14,6 @@
     width: 500px;
 }
 
-.div-first-img {
-    width: 450px;
-}
-
 .div-olax-happy{
     width: 95%;
     height: 100%;
@@ -29,7 +25,6 @@
 @media (max-width: 767px) {
     .h1-olex{
         font-size: 40px;
-        margin: auto;
         margin-bottom: 10px;
     }
     .h2-kids{
@@ -38,38 +33,13 @@
     .div-button{
         width: max-content;
     }
-    .div-first-img{
-        margin: 0;
-        width: 70%;
-        height: 70%;
-    }
-
     .div-h1-ex h1{
         font-size: 36px;
         margin-left: 6px;
     }
-    .div-two div{
+
+    .div-p p{
         text-align: center;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .figure-container-icon{
-        margin-top: 15px;
-    }
-
-    .div-text-h2 h2{
-        text-align: center;
-        font-size: 40px;
-    }
-
-    .div-text-p p{
-        text-align: center;
-        width: 80%;
-    }
-
-    .div-image-person{
-        display: none;
     }
 
 }

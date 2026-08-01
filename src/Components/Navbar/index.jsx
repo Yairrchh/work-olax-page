@@ -1,35 +1,35 @@
-import { NavLink, useLocation } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import iconOlax from "../../assets/icon/olaxlogo.png"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useCallback } from "react"
 import { useMediaQuery } from "react-responsive"
 
 const WHATSAPP_BTN_STORAGE_KEY = "olax_whatsapp_btn_position_v3";
 const WHATSAPP_BTN_SIZE = 52;
 const WHATSAPP_BTN_MARGIN = 8;
+const BOTTOM_NAV_HEIGHT = 64;
+
+const bottomNavLinks = [
+    { to: "/", label: "Inicio" },
+    { to: "/products", label: "Productos" },
+    { to: "/how-to-buy", label: "Cómo surtir" },
+    { to: "/suppliers-list", label: "Proveedores" },
+    { to: "/us-page", label: "Nosotros" },
+];
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const isTableOrMobile = useMediaQuery({ maxWidth: 1023 });
     const [whatsappPosition, setWhatsappPosition] = useState(null);
     const dragInfo = useRef({ dragging: false, moved: false, offsetX: 0, offsetY: 0 });
-    const { pathname } = useLocation();
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    }
-
-    useEffect(() => {
-        setIsMenuOpen(false);
-    }, [pathname]);
-
-    const clampPosition = (x, y) => {
+    const clampPosition = useCallback((x, y) => {
+        const bottomReserved = isTableOrMobile ? BOTTOM_NAV_HEIGHT + WHATSAPP_BTN_MARGIN : WHATSAPP_BTN_MARGIN;
         const maxX = window.innerWidth - WHATSAPP_BTN_SIZE - WHATSAPP_BTN_MARGIN;
-        const maxY = window.innerHeight - WHATSAPP_BTN_SIZE - WHATSAPP_BTN_MARGIN;
+        const maxY = window.innerHeight - WHATSAPP_BTN_SIZE - bottomReserved;
         return {
             x: Math.min(Math.max(x, WHATSAPP_BTN_MARGIN), Math.max(maxX, WHATSAPP_BTN_MARGIN)),
             y: Math.min(Math.max(y, WHATSAPP_BTN_MARGIN), Math.max(maxY, WHATSAPP_BTN_MARGIN)),
         };
-    };
+    }, [isTableOrMobile]);
 
     useEffect(() => {
         const saved = localStorage.getItem(WHATSAPP_BTN_STORAGE_KEY);
@@ -43,7 +43,7 @@ const Navbar = () => {
             }
         }
         setWhatsappPosition(clampPosition(window.innerWidth - WHATSAPP_BTN_SIZE - 20, window.innerHeight - WHATSAPP_BTN_SIZE - 150));
-    }, []);
+    }, [clampPosition]);
 
     const handlePointerDown = (event) => {
         dragInfo.current.dragging = true;
@@ -93,70 +93,65 @@ const Navbar = () => {
             <span className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-red-600/0 via-red-600/50 to-red-600/0"></span>
             {/* Header Móvil */}
             {isTableOrMobile ? (
-                <div className="flex justify-between items-center px-6 py-3">
+                <div className="flex justify-center items-center px-6 py-3">
                     <NavLink to="/">
                         <img className="w-16 h-16 object-contain" src={iconOlax} alt="Logo Olax" />
                     </NavLink>
-                    <button onClick={toggleMenu} className="p-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                        </svg>
-                    </button>
                 </div>
-            ) : null}
+            ) : (
+                /* Menú Desktop - Distribución en 3 bloques independientes */
+                <div className="flex items-center justify-between px-4 lg:px-8 xl:px-12 py-3">
 
-            {/* Menú Desktop - Distribución en 3 bloques independientes */}
-            <div className={`${isTableOrMobile ? (isMenuOpen ? 'flex flex-col pb-6' : 'hidden') : 'flex items-center justify-between px-4 lg:px-8 xl:px-12 py-3'}`}>
-                
-                {/* 1. LOGO A LA IZQUIERDA */}
-                <NavLink to="/" className={isTableOrMobile ? 'hidden' : 'block'}>
-                    <img className="w-24 h-20 object-contain" src={iconOlax} alt="Logo Olax" />
-                </NavLink>
-
-                {/* 2. RUTAS AL CENTRO (AQUÍ MANEJAS LA SEPARACIÓN CON GAP) */}
-                <ul className={`flex ${isTableOrMobile ? 'flex-col items-center gap-4' : 'flex-row items-center justify-center gap-6 xl:gap-12 font-semibold text-sm xl:text-base'}`}>
-                    <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-105 ease-out duration-300">
-                        <NavLink to="/" className={({ isActive }) => isActive ? activeStyle : undefined}>
-                            Inicio
-                        </NavLink>
-                    </li>
-
-                    <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-105 ease-out duration-300">
-                        <NavLink to="/products" className={({ isActive }) => `text-center inline-block ${isActive ? activeStyle : ''}`}>
-                            Conoce nuestros <br /> productos
-                        </NavLink>
-                    </li>
-
-                    <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-105 ease-out duration-300">
-                        <NavLink to="/how-to-buy" className={({ isActive }) => `text-center inline-block ${isActive ? activeStyle : ''}`}>
-                            ¿Cómo surtir <br /> con nosotros?
-                        </NavLink>
-                    </li>
-
-                    <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-105 ease-out duration-300">
-                        <NavLink to="/suppliers-list" className={({ isActive }) => `text-center inline-block ${isActive ? activeStyle : ''}`}>
-                            Listado de <br /> proveedores
-                        </NavLink>
-                    </li>
-
-                    <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-105 ease-out duration-300">
-                        <NavLink to="/us-page" className={({ isActive }) => isActive ? activeStyle : undefined}>
-                            Nosotros
-                        </NavLink>
-                    </li>
-                </ul>
-
-                {/* 3. BOTÓN A LA DERECHA */}
-                <div className={isTableOrMobile ? 'flex justify-center mt-4' : 'block'}>
-                    <NavLink to="/contact" className="text-white rounded-xl bg-[#25D366] px-5 py-2.5 flex items-center justify-center gap-2 shadow-md hover:bg-[#1fb659] transition-transform transform-gpu hover:scale-105 ease-out duration-300">
-                        <WhatsappIcon className="w-4 h-4" />
-                        <span>Contacto / Cotización</span>
+                    {/* 1. LOGO A LA IZQUIERDA */}
+                    <NavLink to="/" className="block">
+                        <img className="w-24 h-20 object-contain" src={iconOlax} alt="Logo Olax" />
                     </NavLink>
-                </div>
-            </div>
 
-            {/* Botón flotante de WhatsApp - solo mobile/tablet, arrastrable y oculto mientras el menú está abierto */}
-            {isTableOrMobile && !isMenuOpen && whatsappPosition && (
+                    {/* 2. RUTAS AL CENTRO (AQUÍ MANEJAS LA SEPARACIÓN CON GAP) */}
+                    <ul className="flex flex-row items-center justify-center gap-6 xl:gap-12 font-semibold text-sm xl:text-base">
+                        <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-105 ease-out duration-300">
+                            <NavLink to="/" className={({ isActive }) => isActive ? activeStyle : undefined}>
+                                Inicio
+                            </NavLink>
+                        </li>
+
+                        <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-105 ease-out duration-300">
+                            <NavLink to="/products" className={({ isActive }) => `text-center inline-block ${isActive ? activeStyle : ''}`}>
+                                Conoce nuestros <br /> productos
+                            </NavLink>
+                        </li>
+
+                        <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-105 ease-out duration-300">
+                            <NavLink to="/how-to-buy" className={({ isActive }) => `text-center inline-block ${isActive ? activeStyle : ''}`}>
+                                ¿Cómo surtir <br /> con nosotros?
+                            </NavLink>
+                        </li>
+
+                        <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-105 ease-out duration-300">
+                            <NavLink to="/suppliers-list" className={({ isActive }) => `text-center inline-block ${isActive ? activeStyle : ''}`}>
+                                Listado de <br /> proveedores
+                            </NavLink>
+                        </li>
+
+                        <li className="hover:text-red-600 transition-transform transform-gpu hover:scale-105 ease-out duration-300">
+                            <NavLink to="/us-page" className={({ isActive }) => isActive ? activeStyle : undefined}>
+                                Nosotros
+                            </NavLink>
+                        </li>
+                    </ul>
+
+                    {/* 3. BOTÓN A LA DERECHA */}
+                    <div className="block">
+                        <a href="https://wa.link/nqo33g" target="_blank" rel="noopener noreferrer" className="text-white rounded-xl bg-[#25D366] px-5 py-2.5 flex items-center justify-center gap-2 shadow-md hover:bg-[#1fb659] transition-transform transform-gpu hover:scale-105 ease-out duration-300">
+                            <WhatsappIcon className="w-4 h-4" />
+                            <span>Contacto / Cotización</span>
+                        </a>
+                    </div>
+                </div>
+            )}
+
+            {/* Botón flotante de WhatsApp - solo mobile/tablet, arrastrable */}
+            {isTableOrMobile && whatsappPosition && (
                 <NavLink
                     to="/contact"
                     aria-label="Contáctanos por WhatsApp"
@@ -169,6 +164,27 @@ const Navbar = () => {
                 >
                     <WhatsappIcon className="w-7 h-7" />
                 </NavLink>
+            )}
+
+            {/* Barra de navegación inferior fija - solo mobile/tablet */}
+            {isTableOrMobile && (
+                <ul
+                    className="fixed inset-x-0 bottom-0 z-50 grid grid-cols-5 bg-gradient-to-tr from-white via-[#f2efec] to-[#e4dfdf] border-t border-red-600/30 shadow-[0_-2px_8px_rgba(0,0,0,0.06)]"
+                    style={{ height: `${BOTTOM_NAV_HEIGHT}px` }}
+                >
+                    {bottomNavLinks.map(({ to, label }) => (
+                        <li key={to} className="flex">
+                            <NavLink
+                                to={to}
+                                className={({ isActive }) =>
+                                    `flex-1 flex items-center justify-center text-center px-1 text-[11px] leading-tight font-semibold ${isActive ? 'text-red-600' : 'text-gray-700'}`
+                                }
+                            >
+                                {label}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
             )}
         </nav>
     );

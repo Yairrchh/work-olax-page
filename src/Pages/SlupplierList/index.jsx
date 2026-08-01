@@ -8,10 +8,9 @@ const suppliersData = [
   { region: 'Ciudad Guayana', name: 'Pendiente', contact: 'Pendiente' },
 ]
 
-const SuppliersPage = () => {
+const SuppliersContent = () => {
   return (
-    <Layout>
-      {/* Fondo off-white mate / suave que no encandila */}
+      /* Fondo off-white mate / suave que no encandila */
       <section className="w-full bg-[#e8e8e8] text-neutral-800 py-16 px-6 md:px-16 min-h-[85vh]">
         <div className="max-w-5xl mx-auto">
           
@@ -27,7 +26,7 @@ const SuppliersPage = () => {
 
           {/* Descripción */}
           <p className="text-neutral-600 text-sm md:text-base leading-relaxed max-w-3xl mb-10">
-            OLAX no trata directamente con tiendas pequeñas: surte a un grupo de grandes proveedores autorizados, y son ellos quienes distribuyen los equipos al resto de tiendas del país. Esta sección conecta a cualquier tienda interesada con el proveedor autorizado más cercano.
+            En OLAX trabajamos a través de una sólida red de grandes proveedores autorizados para llegar a cada rincón del país. Esta sección te conecta directamente con el distribuidor oficial más cercano para que tu tienda pueda abastecerse fácilmente.
           </p>
 
           {/* Card / Tabla en un gris claro descansado */}
@@ -54,8 +53,15 @@ const SuppliersPage = () => {
 
         </div>
       </section>
+  )
+}
+
+const SuppliersPage = () => {
+  return (
+    <Layout>
+      <SuppliersContent/>
     </Layout>
   )
 }
 
-export { SuppliersPage }
+export { SuppliersPage, SuppliersContent }

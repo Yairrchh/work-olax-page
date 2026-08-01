@@ -1,28 +1,25 @@
-import { NavLink } from "react-router-dom";
 import { Layout } from "../../Components/Layout";
 
+const steps = [
+  {
+    number: "01",
+    subtitle: "ESCRÍBENOS",
+    description: "Contáctanos por WhatsApp o mediante el formulario de cotización de nuestro sitio."
+  },
+  {
+    number: "02",
+    subtitle: "COTIZA TU PEDIDO",
+    description: "Armamos una propuesta según el volumen que tu negocio necesita."
+  },
+  {
+    number: "03",
+    subtitle: "RECIBE Y SURTE TU VITRINA",
+    description: "Coordinamos la entrega y tu negocio queda listo para vender OLAX."
+  }
+];
 
-const HowToBuySection = () => {
-  const steps = [
-    {
-      number: "01",
-      subtitle: "ESCRÍBENOS",
-      description: "Contáctanos por WhatsApp o mediante el formulario de cotización de nuestro sitio."
-    },
-    {
-      number: "02",
-      subtitle: "COTIZA TU PEDIDO",
-      description: "Armamos una propuesta según el volumen que tu negocio necesita."
-    },
-    {
-      number: "03",
-      subtitle: "RECIBE Y SURTE TU VITRINA",
-      description: "Coordinamos la entrega y tu negocio queda listo para vender OLAX."
-    }
-  ];
-
+const HowToBuyContent = () => {
   return (
-    <Layout>
             <section className="pt-6 pb-16 px-6 max-w-7xl mx-auto">
       {/* Encabezado */}
       <div className="mb-12">
@@ -64,17 +61,25 @@ const HowToBuySection = () => {
 
       {/* Botón Call to Action en Bloque Completo (Estilo Diapositiva) */}
       <div className="w-full mt-12 lg:mt-0">
-        <NavLink
-          to="/contact"
+        <a
+          href="https://wa.link/nqo33g"
+          target="_blank"
+          rel="noopener noreferrer"
           className="w-full block text-center bg-red-600 text-white font-bold tracking-wider uppercase text-sm lg:text-base py-4 rounded-xl shadow-md hover:bg-red-700 transition-all transform hover:scale-[1.01]"
         >
-          Quiero ser distribuidor autorizado
-        </NavLink>
+          Quiero comprar al gran mayor y ser distribuidor autorizado
+        </a>
       </div>
     </section>
-    </Layout>
-
   );
 };
 
-export {HowToBuySection};
+const HowToBuySection = () => {
+  return (
+    <Layout>
+      <HowToBuyContent/>
+    </Layout>
+  );
+};
+
+export {HowToBuySection, HowToBuyContent};

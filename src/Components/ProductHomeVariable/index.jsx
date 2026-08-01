@@ -52,7 +52,7 @@ const ProductHomeVariable = () => {
     </div>
 </div>
 
-            <div className="div-first-img w-[400px] h-[400px] flex items-center justify-center overflow-hidden">
+            <div className="div-first-img w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] flex items-center justify-center overflow-hidden">
                 {
                     preloadedImages.length > 0 && (
                         <img
