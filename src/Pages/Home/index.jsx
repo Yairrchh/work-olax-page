@@ -15,7 +15,7 @@ const Home = () => {
         <Layout>
             <BodyHome/>
             {isMobile && (
-                <div className="flex flex-col gap-y-12 w-full">
+                <div className="flex flex-col items-center gap-y-12 w-full">
                     <HowToBuyContent/>
                     <SuppliersContent/>
                     <BestSellers/>

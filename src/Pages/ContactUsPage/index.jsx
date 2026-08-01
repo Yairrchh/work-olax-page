@@ -9,7 +9,7 @@ import iconMap from "/icon-footer/map-icon.svg"
 const ContactUsContent = () => {
     return (
         <>
-            <div className="div-contacto w-full h-3/4 flex flex-col gap-y-4 md:gap-y-12 items-center justify-center rounded-2xl mx-3">
+            <div className="div-contacto w-[calc(100%-24px)] h-3/4 flex flex-col gap-y-4 md:gap-y-12 items-center justify-center rounded-2xl">
                 <div>
                     <h1 className="text-white text-4xl sm:text-6xl md:text-7xl lg:text-9xl mt-6 md:mt-12 lg:mt-20 font-extralight">Contáctanos</h1>
                 </div>

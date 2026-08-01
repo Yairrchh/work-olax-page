@@ -5,7 +5,7 @@ import './index.css'
 const UsPageContent = () => {
     return (
         <>
-            <div className="div-nosotro w-full h-3/4 flex flex-col gap-y-12 items-center justify-center rounded-2xl m-4">
+            <div className="div-nosotro w-[calc(100%-32px)] h-3/4 flex flex-col gap-y-12 items-center justify-center rounded-2xl m-4">
                 <div>
                     <h1 className="text-effect mt-8 md:mt-14 font-bold text-6xl sm:text-7xl md:text-8xl lg:text-[150px]">Nosotros</h1>
                 </div>

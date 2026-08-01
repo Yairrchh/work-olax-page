@@ -80,14 +80,14 @@ const ProductShowcase = ({ eyebrow, title, products, variant = "bestSeller" }) =
                 </div>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+            <div className="flex flex-wrap justify-center gap-5">
                 {
                     filteredProducts.length > 0
                         ? filteredProducts.map((data) => (
                             <div
                                 key={data.id}
                                 onClick={() => showProduct(data)}
-                                className={`showcase-card relative overflow-hidden cursor-pointer bg-white border border-gray-200 rounded-xl flex flex-col items-center p-4 transition-transform transform-gpu hover:-translate-y-1 ease-out duration-300 ${comingSoon ? "showcase-card-dim" : ""}`}
+                                className={`showcase-card relative overflow-hidden cursor-pointer bg-white border border-gray-200 rounded-xl flex flex-col items-center p-4 transition-transform transform-gpu hover:-translate-y-1 ease-out duration-300 w-[calc(50%-10px)] sm:w-[calc(33.333%-14px)] lg:w-[calc(20%-16px)] ${comingSoon ? "showcase-card-dim" : ""}`}
                             >
                                 {
                                     comingSoon &&
@@ -103,7 +103,7 @@ const ProductShowcase = ({ eyebrow, title, products, variant = "bestSeller" }) =
                                 }
                             </div>
                         ))
-                        : <p className="col-span-full text-center text-gray-500 py-6">No hay productos en esta categoría por ahora.</p>
+                        : <p className="w-full text-center text-gray-500 py-6">No hay productos en esta categoría por ahora.</p>
                 }
             </div>
         </section>
