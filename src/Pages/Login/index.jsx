@@ -32,7 +32,7 @@ const Login = () => {
             return;
         }
 
-        navigate("/admin-xk90/products");
+        navigate("/admin-xk90/productos");
     };
 
     return (

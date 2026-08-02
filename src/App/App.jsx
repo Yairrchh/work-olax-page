@@ -44,7 +44,7 @@ const AppRoutes = () => {
       {path: '/how-to-buy', element: <HowToBuySection/>},
       {path: '/suppliers-list', element: <SuppliersPage/>},
       {path: '/admin-xk90', element: <Login/>},
-      {path: '/admin-xk90/products', element: <ProtectedRoute><AdminProductsPage/></ProtectedRoute>},
+      {path: '/admin-xk90/productos', element: <ProtectedRoute><AdminProductsPage/></ProtectedRoute>},
       {path: '/*', element: <NotFound/>},
   ]);
   return routes
