@@ -1,21 +1,38 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Layout } from "../../Components/Layout";
+import { useAuth } from "../../Context/AuthContext";
 import iconOlax from "../../assets/icon/olaxlogo.png";
 
 const Login = () => {
     const [formData, setFormData] = useState({ email: "", password: "" });
     const [showPassword, setShowPassword] = useState(false);
     const [rememberMe, setRememberMe] = useState(false);
+    const [error, setError] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const { signIn } = useAuth();
+    const navigate = useNavigate();
 
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log({ ...formData, rememberMe });
+        setError("");
+        setIsSubmitting(true);
+
+        const { error } = await signIn(formData.email, formData.password);
+
+        setIsSubmitting(false);
+
+        if (error) {
+            setError("Correo o contraseña incorrectos");
+            return;
+        }
+
+        navigate("/admin-xk90/products");
     };
 
     return (
@@ -134,16 +151,18 @@ const Login = () => {
                                 />
                                 Recuérdame
                             </label>
-                            <a href="#" className="text-red-600 font-semibold hover:text-red-700 transition-colors">
-                                ¿Olvidaste tu contraseña?
-                            </a>
                         </div>
+
+                        {error && (
+                            <p className="text-sm text-red-600 font-medium text-center -mt-1">{error}</p>
+                        )}
 
                         <button
                             type="submit"
-                            className="text-white rounded-xl bg-red-600 py-2.5 font-semibold shadow-md hover:bg-red-700 transition-transform transform-gpu hover:scale-105 ease-out duration-300 mt-2"
+                            disabled={isSubmitting}
+                            className="text-white rounded-xl bg-red-600 py-2.5 font-semibold shadow-md hover:bg-red-700 transition-transform transform-gpu hover:scale-105 ease-out duration-300 mt-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                         >
-                            Iniciar sesión
+                            {isSubmitting ? "Ingresando..." : "Iniciar sesión"}
                         </button>
                     </form>
 

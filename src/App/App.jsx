@@ -9,10 +9,13 @@ import { NotFound } from '../Pages/NotFound'
 import { HowToBuySection } from '../Pages/HowToStock'
 import { SuppliersPage } from '../Pages/SlupplierList'
 import { Login } from '../Pages/Login'
+import { AdminProductsPage } from '../Pages/AdminProductsPage'
 import './App.css'
 import { Navbar } from '../Components/Navbar'
 import { Layout } from '../Components/Layout'
+import { ProtectedRoute } from '../Components/ProtectedRoute'
 import { OlaxPageProvider } from '../Context'
+import { AuthProvider } from '../Context/AuthContext'
 
 const ContactAndUsPage = () => (
   <Layout>
@@ -40,7 +43,8 @@ const AppRoutes = () => {
       {path: '/contact', element: <ContactAndUsPage/>},
       {path: '/how-to-buy', element: <HowToBuySection/>},
       {path: '/suppliers-list', element: <SuppliersPage/>},
-      {path: '/login', element: <Login/>},
+      {path: '/admin-xk90', element: <Login/>},
+      {path: '/admin-xk90/products', element: <ProtectedRoute><AdminProductsPage/></ProtectedRoute>},
       {path: '/*', element: <NotFound/>},
   ]);
   return routes
@@ -50,13 +54,15 @@ function App() {
 
   return (
     <OlaxPageProvider>
-      <BrowserRouter>
-        <ScrollToTop/>
-        <Navbar/>
-        <main className="pb-16 lg:pb-0">
-          <AppRoutes/>
-        </main>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <ScrollToTop/>
+          <Navbar/>
+          <main className="pb-16 lg:pb-0">
+            <AppRoutes/>
+          </main>
+        </BrowserRouter>
+      </AuthProvider>
     </OlaxPageProvider>
   )
 }
