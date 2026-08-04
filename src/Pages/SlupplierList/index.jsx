@@ -1,11 +1,10 @@
 import { Layout } from '../../Components/Layout'
 
 const suppliersData = [
-  { region: 'Caracas', name: 'Pendiente', contact: 'Pendiente' },
-  { region: 'Valencia', name: 'Pendiente', contact: 'Pendiente' },
-  { region: 'Barquisimeto', name: 'Pendiente', contact: 'Pendiente' },
-  { region: 'Maracaibo', name: 'Pendiente', contact: 'Pendiente' },
-  { region: 'Ciudad Guayana', name: 'Pendiente', contact: 'Pendiente' },
+  { name: 'Mi Distributors', contact: ['Whatsapp: +1 (754) 236-9859'] },
+  { name: 'Techland', contact: ['Whatsapp: +1 (786) 683-2702', 'Llamadas: +1 (305) 614-4478'] },
+  { name: 'CORBAL', contact: ['Whatsapp: +1 (407) 289-6091'] },
+  { name: 'Ena Wireless', contact: ['Whatsapp: +1 (786) 307-1638'] },
 ]
 
 const SuppliersContent = () => {
@@ -34,7 +33,6 @@ const SuppliersContent = () => {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-[#cfcfcf] border-b border-neutral-300 text-neutral-600 text-xs font-semibold tracking-wider uppercase">
-                  <th className="py-4 px-6">Región</th>
                   <th className="py-4 px-6">Proveedor Autorizado</th>
                   <th className="py-4 px-6">Contacto</th>
                 </tr>
@@ -42,9 +40,12 @@ const SuppliersContent = () => {
               <tbody className="divide-y divide-neutral-300 text-sm">
                 {suppliersData.map((item, index) => (
                   <tr key={index} className="hover:bg-[#d4d4d4] transition-colors">
-                    <td className="py-4 px-6 font-semibold text-neutral-800">{item.region}</td>
-                    <td className="py-4 px-6 text-neutral-600">{item.name}</td>
-                    <td className="py-4 px-6 text-neutral-600">{item.contact}</td>
+                    <td className="py-4 px-6 font-semibold text-neutral-800">{item.name}</td>
+                    <td className="py-4 px-6 text-neutral-600">
+                      {item.contact.map((line, i) => (
+                        <div key={i}>{line}</div>
+                      ))}
+                    </td>
                   </tr>
                 ))}
               </tbody>

@@ -24,7 +24,7 @@ const BodyHome = () => {
                     <p className="px-5">Surte tu negocio con los productos de mayor demanda. <br className="hidden md:inline"/> Te ofrecemos un catálogo completo de tecnología mayorista<br className="hidden md:inline"/> con inventario garantizado, con los mejores márgenes de ganancia<br className="hidden md:inline"/> y atención personalizada para potenciar las ventas de tu comercio.</p>
                 </div>
             </div>
-            <div className="div-features-row flex items-center mt-16 justify-center md:justify-between">
+            <div className="div-features-row flex items-center mt-16 justify-center md:justify-between px-6 md:px-0">
                 <figure className="div-image-person hidden md:block w-5/12">
                         <img className="w-full h-full" src={imgPersona} loading="lazy"/>
                 </figure>
