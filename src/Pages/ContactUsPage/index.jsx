@@ -52,23 +52,29 @@ const ContactUsContent = () => {
             </div>
             <div className="div-contact-map flex flex-col lg:flex-row items-center justify-center gap-x-8 xl:gap-x-40 gap-y-4 md:gap-y-8 mt-2 md:mt-0">
                 <FormContact/>
-                <div>
-                    <div className="flex flex-col items-center mb-5">
-                        <h1 className="text-2xl font-medium">Horarios</h1>
-                        <div className="flex items-center justify-center mt-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <p className="text-lg font-light ml-2">Lun-Vie: 9:00 AM - 6:00 PM</p>
+                <div className="flex flex-col items-center w-11/12 max-w-sm mt-4 md:mt-16">
+                    <div className="relative bg-white w-full p-6 md:p-8 rounded-3xl shadow-xl shadow-black/10 border border-black/5 overflow-hidden">
+                        <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-red-700 via-red-600 to-red-500" />
+                        <div className="flex flex-col items-center text-center mb-5 md:mb-6">
+                            <figure className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-red-600/10 mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.6" stroke="currentColor" className="w-6 h-6 md:w-7 md:h-7 text-red-600">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </figure>
+                            <h1 className="text-black text-2xl md:text-3xl font-bold">Horarios de atención</h1>
                         </div>
-                        <div className="flex items-center justify-center mt-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <p className="text-lg font-light ml-2">Sábado: 10:00 AM - 3:00 PM</p>
+                        <div className="grid gap-3">
+                            <div className="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-neutral-100">
+                                <span className="text-sm font-medium text-neutral-600">Lunes - Viernes</span>
+                                <span className="text-sm font-semibold text-black">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div className="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-neutral-100">
+                                <span className="text-sm font-medium text-neutral-600">Sábado</span>
+                                <span className="text-sm font-semibold text-black">10:00 AM - 3:00 PM</span>
+                            </div>
                         </div>
                     </div>
-                    <div>
+                    <div className="w-full flex justify-center mt-4 rounded-3xl overflow-hidden shadow-xl shadow-black/10 border border-black/5">
                         <Maps/>
                     </div>
                 </div>
