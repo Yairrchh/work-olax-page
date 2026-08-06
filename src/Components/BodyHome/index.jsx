@@ -24,7 +24,7 @@ const BodyHome = () => {
                     <p className="px-5">Surte tu negocio con los productos de mayor demanda. <br className="hidden md:inline"/> Te ofrecemos un catálogo completo de tecnología mayorista<br className="hidden md:inline"/> con inventario garantizado, con los mejores márgenes de ganancia<br className="hidden md:inline"/> y atención personalizada para potenciar las ventas de tu comercio.</p>
                 </div>
             </div>
-            <div className="div-features-row flex items-center mt-16 justify-center md:justify-between px-6 md:px-0">
+            <div className="div-features-row flex items-center mt-8 md:mt-16 justify-center md:justify-between px-6 md:px-0">
                 <figure className="div-image-person hidden md:block w-5/12">
                         <img className="w-full h-full" src={imgPersona} loading="lazy"/>
                 </figure>
@@ -68,7 +68,7 @@ const BodyHome = () => {
                 </div>
             </div>
 
-            <div className="div-olax-happy flex flex-col items-center justify-center rounded-2xl m-4 mt-16 px-4 md:px-0">
+            <div className="div-olax-happy flex flex-col items-center justify-center rounded-2xl m-4 mt-6 md:mt-16 px-4 md:px-0">
                 <section className="flex flex-wrap gap-3 md:gap-10 items-center justify-center md:justify-between py-8 md:py-0">
                     <div className="div-text-h2 w-full md:w-96 text-black mt-0 md:mt-10 text-2xl sm:text-3xl md:text-5xl text-center md:text-left font-bold m-0 md:m-3">
                         <h2>Con Olax te garantizamos tu felicidad</h2>

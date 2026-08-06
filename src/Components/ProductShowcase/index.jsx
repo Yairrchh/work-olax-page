@@ -42,7 +42,7 @@ const ProductShowcase = ({ eyebrow, title, products, variant = "bestSeller" }) =
     };
 
     return (
-        <section className={`showcase-panel showcase-panel-${variant} w-11/12 max-w-6xl mt-8 rounded-3xl px-6 py-8 sm:px-10 sm:py-12`}>
+        <section className={`showcase-panel showcase-panel-${variant} w-11/12 max-w-6xl rounded-3xl px-6 py-8 sm:px-10 sm:py-12`}>
             <div className="flex flex-col items-center text-center mb-10">
                 <div className="flex items-center gap-2 mb-3">
                     <img src={iconOlax} alt="Olax" className="w-5 h-5 object-contain" />
