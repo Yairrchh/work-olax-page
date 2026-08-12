@@ -7,7 +7,7 @@
 
 .carousel3d-stage {
     position: relative;
-    height: 140px;
+    height: 165px;
     max-width: 780px;
     margin: 0 auto;
     perspective: 1200px;
@@ -17,8 +17,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 132px;
-    height: 100px;
+    width: 158px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;

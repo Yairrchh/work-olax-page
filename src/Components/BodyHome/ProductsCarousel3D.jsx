@@ -1,14 +1,25 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { olaxPageContext } from "../../Context";
+import { getOptimizedImageUrl } from "../../lib/imageTransform";
 import "./ProductsCarousel3D.css";
 
 const ProductsCarousel3D = () => {
     const context = useContext(olaxPageContext);
     const [center, setCenter] = useState(0);
 
-    const carouselProducts = (context?.dataProducts ?? [])
-        .filter((product) => product.images?.[0])
-        .map((product) => ({ id: product.id, name: product.name, image: product.images[0] }));
+    // Se recalcula solo cuando cambia el catálogo, no en cada giro del carrusel.
+    // Las imágenes se piden redimensionadas y en WebP: pesan una fracción del original.
+    const carouselProducts = useMemo(
+        () =>
+            (context?.dataProducts ?? [])
+                .filter((product) => product.images?.[0])
+                .map((product) => ({
+                    id: product.id,
+                    name: product.name,
+                    image: getOptimizedImageUrl(product.images[0], { width: 400 }),
+                })),
+        [context?.dataProducts]
+    );
 
     const n = carouselProducts.length;
 
@@ -34,7 +45,7 @@ const ProductsCarousel3D = () => {
                     // % relativo al propio ancho de la tarjeta: el espaciado escala
                     // automáticamente al crecer/achicar las tarjetas por CSS (media queries).
                     const x = offset * 88;
-                    const scale = abs === 0 ? 1 : abs === 1 ? 0.72 : 0.5;
+                    const scale = abs === 0 ? 1.2 : abs === 1 ? 0.72 : 0.5;
                     const rotY = offset * -22;
                     const z = -abs * 90;
                     const opacity = abs > 2 ? 0 : abs === 0 ? 1 : abs === 1 ? 0.75 : 0.4;
@@ -54,7 +65,7 @@ const ProductsCarousel3D = () => {
                                         : "drop-shadow(0 10px 14px rgba(0,0,0,0.15))",
                             }}
                         >
-                            <img src={product.image} alt={product.name} loading="lazy" />
+                            <img src={product.image} alt={product.name} />
                         </div>
                     );
                 })}
