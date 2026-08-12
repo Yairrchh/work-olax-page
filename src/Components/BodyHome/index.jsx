@@ -7,6 +7,7 @@ import iconCheck from "/icon-home/icon-check.svg"
 import iconSegurity from "/icon-home/icon-segurity.svg"
 import iconPrecio from "/icon-home/icon-precio.svg"
 import imgPersona from "/img-background/pngegg1.png"
+import { ProductsCarousel3D } from "./ProductsCarousel3D";
 // import { ProductHomeVariable } from "../ProductHomeVariable";
 
 const BodyHome = () => {
@@ -15,6 +16,7 @@ const BodyHome = () => {
     return (
         <>
             {/* <ProductHomeVariable/> */}
+            <ProductsCarousel3D/>
 
             <div className=" div-text flex flex-wrap items-center gap-2 md:gap-5 justify-center mt-8 md:mt-16">
                 <div className="div-h1-ex">
