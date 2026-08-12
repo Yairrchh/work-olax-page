@@ -48,10 +48,10 @@ const ProductsCarousel3D = () => {
                                 transform: `translate(-50%,-50%) translateX(${x}%) translateZ(${z}px) rotateY(${rotY}deg) scale(${scale})`,
                                 opacity,
                                 zIndex,
-                                boxShadow:
+                                filter:
                                     abs === 0
-                                        ? "0 22px 40px rgba(224,33,39,0.22)"
-                                        : "0 14px 24px rgba(0,0,0,0.10)",
+                                        ? "drop-shadow(0 18px 22px rgba(224,33,39,0.28))"
+                                        : "drop-shadow(0 10px 14px rgba(0,0,0,0.15))",
                             }}
                         >
                             <img src={product.image} alt={product.name} loading="lazy" />
