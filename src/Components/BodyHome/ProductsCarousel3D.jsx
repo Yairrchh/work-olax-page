@@ -27,7 +27,7 @@ const ProductsCarousel3D = () => {
         if (n === 0) return;
         const interval = setInterval(() => {
             setCenter((prev) => (prev + 1) % n);
-        }, 2200);
+        }, 1500);
         return () => clearInterval(interval);
     }, [n]);
 
