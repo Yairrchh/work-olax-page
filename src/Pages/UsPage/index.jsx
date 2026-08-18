@@ -1,4 +1,5 @@
 import { Layout } from "../../Components/Layout";
+import { Reveal } from "../../Components/Reveal";
 import imguspage from "/img-background/pngegg.png"
 import './index.css'
 
@@ -13,7 +14,7 @@ const UsPageContent = () => {
                     <p className="text-p text-white text-base sm:text-lg lg:text-xl w-11/12 sm:w-8/12 mb-20 text-center font-light px-4">En Olax sabemos que la tecnología es una parte fundamental de nuestras vidas. Desde la forma en que trabajamos y estudiamos, hasta la manera en que nos conectamos con los demás, la tecnología es la clave para avanzar en nuestra sociedad cada vez más digital.</p>
                 </div>
             </div>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-6 mt-6 md:flex md:flex-row md:flex-wrap md:items-center md:justify-center md:gap-0 md:mt-10">
+            <Reveal as="div" className="grid grid-cols-2 gap-x-4 gap-y-6 mt-6 md:flex md:flex-row md:flex-wrap md:items-center md:justify-center md:gap-0 md:mt-10">
                 <div className="contents md:flex md:flex-col md:items-center md:gap-10">
                     <div className="flex flex-col items-center justify-start self-start md:justify-center md:self-auto m-0 md:m-5">
                         <figure className="w-10 h-10 md:w-16 md:h-12 flex items-center justify-center bg-red-700 rounded-lg">
@@ -65,7 +66,7 @@ const UsPageContent = () => {
                         <p className="font-semibold text-sm md:text-2xl text-center">Help Desk 24/7</p>
                     </div>
                 </div>
-            </div>
+            </Reveal>
         </>
     )
 }

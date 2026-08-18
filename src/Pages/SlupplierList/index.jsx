@@ -1,4 +1,5 @@
 import { Layout } from '../../Components/Layout'
+import { Reveal } from '../../Components/Reveal'
 
 const suppliersData = [
   { name: 'Mi Distributors', contact: ['Whatsapp: +1 (754) 236-9859'] },
@@ -11,7 +12,7 @@ const SuppliersContent = () => {
   return (
       /* Fondo off-white mate / suave que no encandila */
       <section className="w-full bg-[#e8e8e8] text-neutral-800 pt-3 pb-8 md:py-16 px-6 md:px-16 md:min-h-[85vh]">
-        <div className="max-w-5xl mx-auto">
+        <Reveal as="div" className="max-w-5xl mx-auto">
           
           {/* Tag de sección */}
           <span className="text-red-600 font-bold text-xs md:text-sm tracking-widest uppercase block mb-2">
@@ -67,7 +68,7 @@ const SuppliersContent = () => {
             </table>
           </div>
 
-        </div>
+        </Reveal>
       </section>
   )
 }

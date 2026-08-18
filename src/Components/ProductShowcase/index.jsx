@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import iconOlax from "../../assets/icon/olaxlogo.png";
+import { Reveal } from "../Reveal";
 import "./index.css";
 
 const categories = ["Todos", "Tablets", "Routers", "Otros"];
@@ -42,7 +43,7 @@ const ProductShowcase = ({ eyebrow, title, products, variant = "bestSeller" }) =
     };
 
     return (
-        <section className={`showcase-panel showcase-panel-${variant} w-11/12 max-w-6xl rounded-3xl px-6 py-8 sm:px-10 sm:py-12`}>
+        <Reveal as="section" className={`showcase-panel showcase-panel-${variant} w-11/12 max-w-6xl rounded-3xl px-6 py-8 sm:px-10 sm:py-12`}>
             <div className="flex flex-col items-center text-center mb-10">
                 <div className="flex items-center gap-2 mb-3">
                     <img src={iconOlax} alt="Olax" className="w-5 h-5 object-contain" />
@@ -106,7 +107,7 @@ const ProductShowcase = ({ eyebrow, title, products, variant = "bestSeller" }) =
                         : <p className="w-full text-center text-gray-500 py-6">No hay productos en esta categoría por ahora.</p>
                 }
             </div>
-        </section>
+        </Reveal>
     );
 };
 

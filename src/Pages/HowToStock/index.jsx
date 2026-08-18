@@ -1,4 +1,5 @@
 import { Layout } from "../../Components/Layout";
+import { Reveal } from "../../Components/Reveal";
 
 const steps = [
   {
@@ -20,7 +21,7 @@ const steps = [
 
 const HowToBuyContent = () => {
   return (
-            <section className="pt-6 pb-2 md:pb-16 px-6 max-w-7xl mx-auto">
+            <Reveal as="section" className="pt-6 pb-2 md:pb-16 px-6 max-w-7xl mx-auto">
       {/* Encabezado */}
       <div className="mb-12">
         <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-2">
@@ -70,7 +71,7 @@ const HowToBuyContent = () => {
           Quiero comprar al gran mayor y ser distribuidor autorizado
         </a>
       </div>
-    </section>
+    </Reveal>
   );
 };
 

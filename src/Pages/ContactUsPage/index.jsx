@@ -1,6 +1,7 @@
 import { FormContact } from "../../Components/FormContact";
 import { Layout } from "../../Components/Layout";
 import { Maps } from "../../Components/Maps";
+import { Reveal } from "../../Components/Reveal";
 import './index.css'
 import iconEmail from "/icon-footer/email-icon.svg"
 import iconllamada from "/icon-footer/icon-llamada.svg"
@@ -17,7 +18,7 @@ const ContactUsContent = () => {
                     <p className="text-white text-sm md:text-xl w-11/12 md:w-8/12 mt-2 mb-6 md:mt-10 md:mb-20 text-center font-light">Embrace Better Life. Innovando el mercado tecnológico. Productos 100% garantizados. Cuenta con OLAX en cualquier lugar y en todo momento.</p>
                 </div>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-3 mt-6 md:mt-16">
+            <Reveal as="div" className="flex flex-wrap items-center justify-center gap-x-16 gap-y-3 mt-6 md:mt-16">
                 <div className="div-contain flex flex-row items-center justify-center gap-3 md:flex-col md:gap-3 w-fit max-w-[92%] px-5 sm:w-72 sm:px-0 h-auto py-2.5 md:h-40 md:py-0 rounded-2xl bg-red-700
                                 transition-transform transform-gpu hover:scale-110 ease-out duration-300">
                     <figure className="flex items-center rounded-lg justify-center w-8 h-8 md:w-12 md:h-12 bg-red-700 hover:bg-gray-600 flex-shrink-0">
@@ -49,8 +50,8 @@ const ContactUsContent = () => {
                         <p className="text-white text-sm md:text-2xl font-light text-left md:text-center">8422 NW 66 St Miami, 33166</p>
                     </div>
                 </div>
-            </div>
-            <div className="div-contact-map flex flex-col lg:flex-row items-center justify-center gap-x-8 xl:gap-x-40 gap-y-4 md:gap-y-8 mt-2 md:mt-0">
+            </Reveal>
+            <Reveal as="div" className="div-contact-map flex flex-col lg:flex-row items-center justify-center gap-x-8 xl:gap-x-40 gap-y-4 md:gap-y-8 mt-2 md:mt-0">
                 <FormContact/>
                 <div className="flex flex-col items-center w-11/12 max-w-sm mt-4 md:mt-16">
                     <div className="relative bg-white w-full p-6 md:p-8 rounded-3xl shadow-xl shadow-black/10 border border-black/5 overflow-hidden">
@@ -78,7 +79,7 @@ const ContactUsContent = () => {
                         <Maps/>
                     </div>
                 </div>
-            </div>
+            </Reveal>
         </>
     )
 }

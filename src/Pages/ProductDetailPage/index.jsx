@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { olaxPageContext } from "../../Context";
 import { Layout } from "../../Components/Layout";
+import { Reveal } from "../../Components/Reveal";
 import iconOlax from "../../assets/icon/olaxlogo.png";
 import "./index.css";
 
@@ -32,6 +33,11 @@ const TruckIcon = () => (
     </svg>
 );
 
+const getFeatureLines = (description) => {
+    const text = description?.map((spec) => spec.property).join(". ") ?? "";
+    return text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+};
+
 const trustPoints = [
     { icon: BadgeIcon, label: "Distribuidor autorizado" },
     { icon: HeadsetIcon, label: "Atención personalizada" },
@@ -45,6 +51,7 @@ const ProductDetailPage = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const product = context.dataProducts?.find((item) => String(item.id) === id);
+    const featureLines = product ? getFeatureLines(product.description) : [];
 
     useEffect(() => {
         setCurrentImageIndex(0);
@@ -87,7 +94,7 @@ const ProductDetailPage = () => {
                     Volver
                 </button>
 
-                <div className="detail-card bg-white border border-gray-100 rounded-3xl shadow-sm mt-4 p-6 sm:p-10">
+                <Reveal as="div" className="detail-card bg-white border border-gray-100 rounded-3xl shadow-sm mt-4 p-6 sm:p-10">
                 <div className="flex flex-col lg:flex-row gap-10">
                     <div className="flex-1">
                         <div className="detail-main-image relative rounded-2xl bg-gray-50 flex items-center justify-center overflow-hidden">
@@ -134,9 +141,17 @@ const ProductDetailPage = () => {
                         <hr className="my-6 border-gray-100" />
 
                         <h2 className="text-sm font-bold uppercase tracking-wide text-gray-500 mb-3">Características</h2>
-                        <p className="text-sm text-gray-600 leading-relaxed mb-8">
-                            {product.description?.map((spec) => `${spec.name}: ${spec.property}`).join(". ")}
-                        </p>
+                        {featureLines.length > 1 ? (
+                            <ul className="list-disc list-inside columns-1 sm:columns-2 gap-x-8 text-sm text-gray-600 leading-relaxed mb-8">
+                                {featureLines.map((line, index) => (
+                                    <li key={index} className="mb-1 break-inside-avoid">{line}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p className="text-sm text-gray-600 leading-relaxed mb-8">
+                                {featureLines[0]}
+                            </p>
+                        )}
 
                         <div className="trust-panel bg-slate-500 rounded-2xl px-6 py-5 mt-auto">
                             <p className="text-xs text-center font-semibold uppercase tracking-wide text-red-500 mb-4">Por qué comprar con nosotros</p>
@@ -176,7 +191,7 @@ const ProductDetailPage = () => {
                         </button>
                     </div>
                 </div>
-                </div>
+                </Reveal>
             </div>
         </Layout>
     );
