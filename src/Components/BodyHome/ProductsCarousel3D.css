@@ -32,6 +32,39 @@
     object-fit: contain;
 }
 
+.carousel3d-stage--in {
+    animation: carousel3d-fadein 0.5s ease;
+}
+
+@keyframes carousel3d-fadein {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel3d-card--skeleton {
+    width: 90%;
+    height: 70%;
+    border-radius: 14px;
+    background: linear-gradient(100deg, #ececec 30%, #f6f6f6 50%, #ececec 70%);
+    background-size: 200% 100%;
+    animation: carousel3d-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes carousel3d-shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
 /* Tablet */
 @media (min-width: 768px) {
     .carousel3d-wrap {

@@ -22,6 +22,7 @@ const OlaxPageProvider = ({children}) => {
     const [dataProductsHome, setDataProductsHome] = useState([]);
     //product of product
     const [dataProducts, setDataProducts] = useState([]);
+    const [loadingProducts, setLoadingProducts] = useState(true);
 
     useEffect(() => {
         setDataProductsHome(productsOfHome);
@@ -35,6 +36,7 @@ const OlaxPageProvider = ({children}) => {
             if (!error && data) {
                 setDataProducts(data.map(mapSupabaseProduct));
             }
+            setLoadingProducts(false);
         };
 
         fetchProducts();
@@ -48,6 +50,7 @@ const OlaxPageProvider = ({children}) => {
                 setDataProductsHome,
                 dataProducts,
                 setDataProducts,
+                loadingProducts,
             }}
         >
             {children}
