@@ -4,6 +4,7 @@ import iconEmail from "/icon-footer/email-icon.svg"
 import iconllamada from "/icon-footer/icon-llamada.svg"
 import iconMap from "/icon-footer/map-icon.svg"
 import iconInstagram from "/icon-footer/instagram.svg"
+import novakodeLogo from "/icon-footer/novakode-logo.png"
 
 
 
@@ -45,9 +46,18 @@ const Footer = () => {
                     </div>
                 </a>
             </div>
-            <div>
-                <a href="https://classy-crepe-8f2013.netlify.app/" target="_blank" rel="noopener noreferrer">
-                <p className="text-white text-center text-[10px] md:text-xs">© 2023 olaxglobal • All Rights Reserved, Elaborado por Yair chira</p>
+            <div className="flex flex-col items-center gap-1.5">
+                <p className="text-white text-center text-[10px] md:text-xs">© 2023 olaxglobal • All Rights Reserved</p>
+                <a
+                    href="https://novakodestudio.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity"
+                >
+                    <img className="h-4 w-4" src={novakodeLogo} alt="Novakode Studio" loading="lazy" />
+                    <span className="text-white text-[10px] md:text-xs">
+                        Sitio desarrollado por <span className="font-semibold">nova<span className="text-[#29C5F6]">kode</span></span>
+                    </span>
                 </a>
             </div>
         </footer>
