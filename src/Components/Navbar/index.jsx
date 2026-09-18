@@ -159,7 +159,7 @@ const Navbar = () => {
                                 <span>Panel de productos</span>
                             </NavLink>
                         ) : (
-                            <a href="https://wa.link/nqo33g" target="_blank" rel="noopener noreferrer" className="text-white rounded-xl bg-[#25D366] px-5 py-2.5 flex items-center justify-center gap-2 shadow-md hover:bg-[#1fb659] transition-transform transform-gpu hover:scale-105 ease-out duration-300">
+                            <a href="https://wa.link/9tpbpi" target="_blank" rel="noopener noreferrer" className="text-white rounded-xl bg-[#25D366] px-5 py-2.5 flex items-center justify-center gap-2 shadow-md hover:bg-[#1fb659] transition-transform transform-gpu hover:scale-105 ease-out duration-300">
                                 <WhatsappIcon className="w-4 h-4" />
                                 <span>Contacto / Cotización</span>
                             </a>
@@ -185,7 +185,7 @@ const Navbar = () => {
                     </Link>
                 ) : (
                     <a
-                        href="https://wa.link/nqo33g"
+                        href="https://wa.link/9tpbpi"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Contáctanos por WhatsApp"
