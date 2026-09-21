@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import iconOlax from "../../assets/icon/olaxlogo.png";
 import { Reveal } from "../Reveal";
+import { getOptimizedImageUrl } from "../../lib/imageTransform";
 import "./index.css";
 
 const categories = ["Todos", "Tablets", "Routers", "Otros"];
@@ -95,7 +96,12 @@ const ProductShowcase = ({ eyebrow, title, products, variant = "bestSeller" }) =
                                         <span className="ribbon bg-amber-600">Pronto</span>
                                 }
                                 <figure className="w-full h-28 flex items-center justify-center overflow-hidden">
-                                    <img className="max-w-full max-h-full object-contain" src={data.images[0]} alt={data.name} loading="lazy" />
+                                    <img
+                                        className="max-w-full max-h-full object-contain"
+                                        src={getOptimizedImageUrl(data.images[0], { width: 240 })}
+                                        alt={data.name}
+                                        loading="lazy"
+                                    />
                                 </figure>
                                 <span className="text-sm text-center font-medium mt-3">{data.name}</span>
                                 {

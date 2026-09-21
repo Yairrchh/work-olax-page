@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { olaxPageContext } from "../../Context";
 import { Layout } from "../../Components/Layout";
 import { Reveal } from "../../Components/Reveal";
+import { getOptimizedImageUrl } from "../../lib/imageTransform";
 import iconOlax from "../../assets/icon/olaxlogo.png";
 import "./index.css";
 
@@ -105,7 +106,7 @@ const ProductDetailPage = () => {
                             )}
                             <img
                                 className="max-w-full max-h-full object-contain"
-                                src={product.images[currentImageIndex]}
+                                src={getOptimizedImageUrl(product.images[currentImageIndex], { width: 800 })}
                                 alt={product.name}
                             />
                             {product.images.length > 1 && (
@@ -123,7 +124,12 @@ const ProductDetailPage = () => {
                                         onClick={() => setCurrentImageIndex(index)}
                                         className={`thumb ${index === currentImageIndex ? "thumb-active" : ""}`}
                                     >
-                                        <img className="w-full h-full object-contain" src={image} alt={`${product.name} ${index + 1}`} loading="lazy" />
+                                        <img
+                                            className="w-full h-full object-contain"
+                                            src={getOptimizedImageUrl(image, { width: 140 })}
+                                            alt={`${product.name} ${index + 1}`}
+                                            loading="lazy"
+                                        />
                                     </button>
                                 ))}
                             </div>
