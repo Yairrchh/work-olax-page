@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
+import { compressImage } from "../../lib/compressImage";
 
 const CATEGORIAS = ["Routers", "Tablets", "Otros"];
 const ESTADOS = [
@@ -55,12 +56,13 @@ const ProductFormModal = ({ producto, onClose, onSaved }) => {
         try {
             const newImageUrls = [];
             for (const file of imageFiles) {
-                const extension = file.name.split(".").pop();
+                const compressed = await compressImage(file);
+                const extension = compressed.type === "image/webp" ? "webp" : "jpg";
                 const path = `${crypto.randomUUID()}.${extension}`;
 
                 const { error: uploadError } = await supabase.storage
                     .from("productos")
-                    .upload(path, file);
+                    .upload(path, compressed, { contentType: compressed.type });
 
                 if (uploadError) throw uploadError;
 
