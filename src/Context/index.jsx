@@ -1,6 +1,11 @@
 import { createContext, useEffect, useState } from "react";
 import { productsOfHome } from "../dataBases/productsOfHome";
+import { localProducts } from "../dataBases/localProducts";
 import { supabase } from "../lib/supabaseClient";
+
+// Supabase esta restringido por cuota hasta el 30-oct-2026: mientras tanto se usan
+// los productos locales (src/dataBases/localProducts.js). Poner en false para volver a Supabase.
+const USE_LOCAL_PRODUCTS = true;
 
 const olaxPageContext = createContext();
 
@@ -26,6 +31,12 @@ const OlaxPageProvider = ({children}) => {
 
     useEffect(() => {
         setDataProductsHome(productsOfHome);
+
+        if (USE_LOCAL_PRODUCTS) {
+            setDataProducts(localProducts.map(mapSupabaseProduct));
+            setLoadingProducts(false);
+            return;
+        }
 
         const fetchProducts = async () => {
             const { data, error } = await supabase
