@@ -200,6 +200,7 @@ const Navbar = () => {
                         className="fixed z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg flex items-center justify-center hover:bg-[#1fb659] transition-transform transform-gpu hover:scale-110 ease-out duration-300 cursor-grab active:cursor-grabbing"
                     >
                         <WhatsappIcon className="w-7 h-7" />
+                        <SantaHat className="-top-3.5 -right-1.5 w-8 rotate-[18deg]" />
                     </a>
                 )
             )}
