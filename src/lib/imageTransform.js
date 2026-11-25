@@ -14,8 +14,28 @@
 // respetando su proporción real.
 const TRANSFORMS_ENABLED = false;
 
+// Sin transformacion de Supabase, las miniaturas se resuelven con una segunda copia
+// pequena (400px) que se sube junto a cada foto: "<id>.webp" -> "<id>-thumb.webp".
+// Las fotos subidas por el admin y las migradas ya la tienen; si faltara alguna,
+// fallbackToFullImage vuelve a la foto grande.
+const THUMB_MAX_WIDTH = 500;
+const THUMB_SUFFIX = "-thumb.webp";
+const STORAGE_PATH = "/storage/v1/object/public/productos/";
+
+const getThumbUrl = (url) =>
+    typeof url === "string" && url.includes(STORAGE_PATH) && url.endsWith(".webp") && !url.endsWith(THUMB_SUFFIX)
+        ? url.replace(/\.webp$/, THUMB_SUFFIX)
+        : url;
+
+const fallbackToFullImage = (event) => {
+    const img = event.currentTarget;
+    if (img.src.endsWith(THUMB_SUFFIX)) {
+        img.src = img.src.slice(0, -THUMB_SUFFIX.length) + ".webp";
+    }
+};
+
 const getOptimizedImageUrl = (url, { width = 400, quality = 70 } = {}) => {
-    if (!TRANSFORMS_ENABLED) return url;
+    if (!TRANSFORMS_ENABLED) return width <= THUMB_MAX_WIDTH ? getThumbUrl(url) : url;
     if (!url || typeof url !== "string" || !url.includes("/storage/v1/object/public/")) {
         return url;
     }
@@ -29,4 +49,4 @@ const getOptimizedImageUrl = (url, { width = 400, quality = 70 } = {}) => {
     return `${transformedUrl}${separator}width=${width}&height=${width}&resize=contain&quality=${quality}&format=webp`;
 };
 
-export { getOptimizedImageUrl };
+export { getOptimizedImageUrl, getThumbUrl, fallbackToFullImage, THUMB_SUFFIX };

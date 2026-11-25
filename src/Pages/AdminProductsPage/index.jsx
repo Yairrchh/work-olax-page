@@ -4,6 +4,8 @@ import { ProductFormModal } from "../../Components/ProductFormModal";
 import { ConfirmDialog } from "../../Components/ConfirmDialog";
 import { useAuth } from "../../Context/AuthContext";
 import { supabase } from "../../lib/supabaseClient";
+import { clearProductsCache } from "../../lib/productsCache";
+import { THUMB_SUFFIX } from "../../lib/imageTransform";
 
 const ESTADO_LABELS = {
     disponible: "Disponible",
@@ -69,6 +71,7 @@ const AdminProductsPage = () => {
     };
 
     const handleSaved = (producto) => {
+        clearProductsCache();
         setProductos((prev) => {
             const exists = prev.some((p) => p.id === producto.id);
             if (exists) {
@@ -95,14 +98,17 @@ const AdminProductsPage = () => {
             return;
         }
 
+        // Cada foto .webp tiene una miniatura "<id>-thumb.webp": se borran juntas.
         const paths = (productoAEliminar.imagenes ?? [])
             .map(getStoragePathFromUrl)
-            .filter(Boolean);
+            .filter(Boolean)
+            .flatMap((path) => (path.endsWith(".webp") ? [path, path.replace(/\.webp$/, THUMB_SUFFIX)] : [path]));
 
         if (paths.length > 0) {
             await supabase.storage.from("productos").remove(paths);
         }
 
+        clearProductsCache();
         setProductos((prev) => prev.filter((p) => p.id !== productoAEliminar.id));
         setIsDeleting(false);
         setProductoAEliminar(null);

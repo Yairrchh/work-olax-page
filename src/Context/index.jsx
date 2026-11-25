@@ -2,10 +2,11 @@ import { createContext, useEffect, useState } from "react";
 import { productsOfHome } from "../dataBases/productsOfHome";
 import { localProducts } from "../dataBases/localProducts";
 import { supabase } from "../lib/supabaseClient";
+import { readProductsCache, readStaleProductsCache, writeProductsCache } from "../lib/productsCache";
 
-// Supabase esta restringido por cuota hasta el 30-oct-2026: mientras tanto se usan
-// los productos locales (src/dataBases/localProducts.js). Poner en false para volver a Supabase.
-const USE_LOCAL_PRODUCTS = true;
+// Los productos se leen de Supabase. Poner en true para forzar la copia local
+// (src/dataBases/localProducts.js), por ejemplo si el proyecto se vuelve a restringir por cuota.
+const USE_LOCAL_PRODUCTS = false;
 
 const olaxPageContext = createContext();
 
@@ -38,14 +39,25 @@ const OlaxPageProvider = ({children}) => {
             return;
         }
 
+        const cached = readProductsCache();
+        if (cached) {
+            setDataProducts(cached.map(mapSupabaseProduct));
+            setLoadingProducts(false);
+            return;
+        }
+
         const fetchProducts = async () => {
             const { data, error } = await supabase
                 .from("productos")
-                .select("*")
+                .select("id,nombre,categoria,caracteristicas,imagenes,estado")
                 .order("created_at", { ascending: true });
 
             if (!error && data) {
+                writeProductsCache(data);
                 setDataProducts(data.map(mapSupabaseProduct));
+            } else {
+                // Supabase no responde (p. ej. cuota agotada): ultima lista guardada o, si no hay, la copia local.
+                setDataProducts((readStaleProductsCache() ?? localProducts).map(mapSupabaseProduct));
             }
             setLoadingProducts(false);
         };

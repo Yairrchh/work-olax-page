@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import iconOlax from "../../assets/icon/olaxlogo.png";
 import { Reveal } from "../Reveal";
-import { getOptimizedImageUrl } from "../../lib/imageTransform";
+import { getOptimizedImageUrl, fallbackToFullImage } from "../../lib/imageTransform";
 import "./index.css";
 
 const categories = ["Todos", "Tablets", "Routers", "Otros"];
@@ -101,6 +101,8 @@ const ProductShowcase = ({ eyebrow, title, products, variant = "bestSeller" }) =
                                         src={getOptimizedImageUrl(data.images[0], { width: 240 })}
                                         alt={data.name}
                                         loading="lazy"
+                                        decoding="async"
+                                        onError={fallbackToFullImage}
                                     />
                                 </figure>
                                 <span className="text-sm text-center font-medium mt-3">{data.name}</span>

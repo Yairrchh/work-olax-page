@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { olaxPageContext } from "../../Context";
 import { Layout } from "../../Components/Layout";
 import { Reveal } from "../../Components/Reveal";
-import { getOptimizedImageUrl } from "../../lib/imageTransform";
+import { getOptimizedImageUrl, fallbackToFullImage } from "../../lib/imageTransform";
 import iconOlax from "../../assets/icon/olaxlogo.png";
 import "./index.css";
 
@@ -129,6 +129,7 @@ const ProductDetailPage = () => {
                                             src={getOptimizedImageUrl(image, { width: 140 })}
                                             alt={`${product.name} ${index + 1}`}
                                             loading="lazy"
+                                            onError={fallbackToFullImage}
                                         />
                                     </button>
                                 ))}

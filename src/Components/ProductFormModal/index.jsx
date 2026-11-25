@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
+import { THUMB_SUFFIX } from "../../lib/imageTransform";
 import { compressImage } from "../../lib/compressImage";
 
 const CATEGORIAS = ["Routers", "Tablets", "Otros"];
@@ -56,15 +57,32 @@ const ProductFormModal = ({ producto, onClose, onSaved }) => {
         try {
             const newImageUrls = [];
             for (const file of imageFiles) {
-                const compressed = await compressImage(file);
-                const extension = compressed.type === "image/webp" ? "webp" : "jpg";
-                const path = `${crypto.randomUUID()}.${extension}`;
+                // Foto principal (max 1000px, la mayor que se muestra es ~800px).
+                const compressed = await compressImage(file, { maxWidth: 1000, maxHeight: 1000, quality: 0.8 });
+                const isWebp = compressed.type === "image/webp";
+                const id = crypto.randomUUID();
+                const path = `${id}.${isWebp ? "webp" : "jpg"}`;
 
+                // Los nombres llevan un UUID unico y nunca cambian: se pueden cachear un año.
+                const uploadOptions = { contentType: compressed.type, cacheControl: "31536000" };
                 const { error: uploadError } = await supabase.storage
                     .from("productos")
-                    .upload(path, compressed, { contentType: compressed.type });
+                    .upload(path, compressed, uploadOptions);
 
                 if (uploadError) throw uploadError;
+
+                // Miniatura (400px) para grilla y carrusel: pesa ~10 KB en vez de ~50 KB.
+                // Si falla no se interrumpe el guardado: el sitio usa la foto grande.
+                if (isWebp) {
+                    try {
+                        const thumb = await compressImage(file, { maxWidth: 400, maxHeight: 400, quality: 0.75 });
+                        if (thumb.type === "image/webp") {
+                            await supabase.storage
+                                .from("productos")
+                                .upload(`${id}${THUMB_SUFFIX}`, thumb, uploadOptions);
+                        }
+                    } catch { /* sin miniatura, se usa la foto grande */ }
+                }
 
                 const { data } = supabase.storage.from("productos").getPublicUrl(path);
                 newImageUrls.push(data.publicUrl);

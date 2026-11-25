@@ -1,6 +1,6 @@
 import { useContext, useEffect, useMemo, useState } from "react";
 import { olaxPageContext } from "../../Context";
-import { getOptimizedImageUrl } from "../../lib/imageTransform";
+import { getOptimizedImageUrl, fallbackToFullImage } from "../../lib/imageTransform";
 import "./ProductsCarousel3D.css";
 
 // Posiciones fijas (5 tarjetas, centro en el índice 2) usadas para el skeleton,
@@ -98,7 +98,7 @@ const ProductsCarousel3D = () => {
                                         : "drop-shadow(0 10px 14px rgba(0,0,0,0.15))",
                             }}
                         >
-                            <img src={product.image} alt={product.name} />
+                            <img src={product.image} alt={product.name} decoding="async" onError={fallbackToFullImage} />
                         </div>
                     );
                 })}
