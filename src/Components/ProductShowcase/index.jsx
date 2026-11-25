@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import iconOlax from "../../assets/icon/olaxlogo.png";
 import { Reveal } from "../Reveal";
 import { getOptimizedImageUrl, fallbackToFullImage } from "../../lib/imageTransform";
+import { ChristmasHoverSparkles } from "../Christmas";
 import "./index.css";
 
 const categories = ["Todos", "Tablets", "Routers", "Otros"];
@@ -91,6 +92,7 @@ const ProductShowcase = ({ eyebrow, title, products, variant = "bestSeller" }) =
                                 onClick={() => showProduct(data)}
                                 className={`showcase-card relative overflow-hidden cursor-pointer bg-white border border-gray-200 rounded-xl flex flex-col items-center p-4 transition-transform transform-gpu hover:-translate-y-1 ease-out duration-300 w-[calc(50%-10px)] sm:w-[calc(33.333%-14px)] lg:w-[calc(20%-16px)] ${comingSoon ? "showcase-card-dim" : ""}`}
                             >
+                                <ChristmasHoverSparkles />
                                 {
                                     comingSoon &&
                                         <span className="ribbon bg-amber-600">Pronto</span>

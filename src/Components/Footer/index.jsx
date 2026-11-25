@@ -5,12 +5,14 @@ import iconllamada from "/icon-footer/icon-llamada.svg"
 import iconMap from "/icon-footer/map-icon.svg"
 import iconInstagram from "/icon-footer/instagram.svg"
 import novakodeLogo from "/icon-footer/novakode-logo.png"
+import { ChristmasSnowDrift } from "../Christmas"
 
 
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col items-center justify-center gap-y-3 py-6 md:py-8 px-4">
+        <footer className="relative flex flex-col items-center justify-center gap-y-3 py-6 md:py-8 px-4">
+            <ChristmasSnowDrift />
             <div className="h-10 md:h-12">
                 <img className="h-full w-auto object-contain" src={olaxLogo} loading="lazy"/>
             </div>

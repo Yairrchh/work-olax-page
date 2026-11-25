@@ -3,6 +3,7 @@ import iconOlax from "../../assets/icon/olaxlogo.png"
 import { useState, useRef, useEffect, useCallback } from "react"
 import { useMediaQuery } from "react-responsive"
 import { useAuth } from "../../Context/AuthContext"
+import { ChristmasLights, ChristmasLightsSpacer, SantaHat } from "../Christmas"
 
 const WHATSAPP_BTN_STORAGE_KEY = "olax_whatsapp_btn_position_v3";
 const WHATSAPP_BTN_SIZE = 52;
@@ -105,8 +106,9 @@ const Navbar = () => {
             {/* Header Móvil */}
             {isTableOrMobile ? (
                 <div className="flex justify-center items-center px-6 py-3">
-                    <NavLink to="/">
+                    <NavLink to="/" className="relative block">
                         <img className="w-16 h-16 object-contain" src={iconOlax} alt="Logo Olax" />
+                        <SantaHat className="-top-2 -right-3 w-8 rotate-[14deg]" />
                     </NavLink>
                 </div>
             ) : (
@@ -114,8 +116,9 @@ const Navbar = () => {
                 <div className="flex items-center justify-between px-4 lg:px-8 xl:px-12 py-3">
 
                     {/* 1. LOGO A LA IZQUIERDA */}
-                    <NavLink to="/" className="block">
+                    <NavLink to="/" className="block relative">
                         <img className="w-24 h-20 object-contain" src={iconOlax} alt="Logo Olax" />
+                        <SantaHat className="-top-1 right-1 w-10 rotate-[14deg]" />
                     </NavLink>
 
                     {/* 2. RUTAS AL CENTRO (AQUÍ MANEJAS LA SEPARACIÓN CON GAP) */}
@@ -221,6 +224,10 @@ const Navbar = () => {
                     ))}
                 </ul>
             )}
+
+            {/* Tematica navideña: guirnalda al borde inferior del menu */}
+            <ChristmasLightsSpacer />
+            <ChristmasLights />
         </nav>
     );
 };

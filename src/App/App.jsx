@@ -16,6 +16,7 @@ import { Layout } from '../Components/Layout'
 import { ProtectedRoute } from '../Components/ProtectedRoute'
 import { OlaxPageProvider } from '../Context'
 import { AuthProvider } from '../Context/AuthContext'
+import { ChristmasSnow, ChristmasTab } from '../Components/Christmas'
 
 const ContactAndUsPage = () => (
   <Layout>
@@ -57,7 +58,9 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <ScrollToTop/>
+          <ChristmasTab/>
           <Navbar/>
+          <ChristmasSnow/>
           <main className="pb-16 lg:pb-0">
             <AppRoutes/>
           </main>

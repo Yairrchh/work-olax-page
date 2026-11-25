@@ -9,6 +9,7 @@ import iconPrecio from "/icon-home/icon-precio.svg"
 import imgPersona from "/img-background/pngegg1.png"
 import { ProductsCarousel3D } from "./ProductsCarousel3D";
 import { Reveal } from "../Reveal";
+import { ChristmasFrost } from "../Christmas";
 // import { ProductHomeVariable } from "../ProductHomeVariable";
 
 const BodyHome = () => {
@@ -21,7 +22,7 @@ const BodyHome = () => {
 
             <div className=" div-text flex flex-wrap items-center gap-2 md:gap-5 justify-center mt-8 md:mt-16">
                 <div className="div-h1-ex">
-                    <h1 className="text-black text-2xl md:text-5xl font-bold">Impulsa el crecimiento<br/> de tu tienda con Olax</h1>
+                    <h1 className="text-black text-2xl md:text-5xl font-bold"><ChristmasFrost>Impulsa el crecimiento<br/> de tu tienda con Olax</ChristmasFrost></h1>
                 </div>
                 <div className="div-p font-light text-sm md:text-lg">
                     <p className="px-5">Surte tu negocio con los productos de mayor demanda. <br className="hidden md:inline"/> Te ofrecemos un catálogo completo de tecnología mayorista<br className="hidden md:inline"/> con inventario garantizado, con los mejores márgenes de ganancia<br className="hidden md:inline"/> y atención personalizada para potenciar las ventas de tu comercio.</p>

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useMemo, useState } from "react";
 import { olaxPageContext } from "../../Context";
 import { getOptimizedImageUrl, fallbackToFullImage } from "../../lib/imageTransform";
+import { ChristmasSparkles } from "../Christmas";
 import "./ProductsCarousel3D.css";
 
 // Posiciones fijas (5 tarjetas, centro en el índice 2) usadas para el skeleton,
@@ -103,6 +104,7 @@ const ProductsCarousel3D = () => {
                     );
                 })}
             </div>
+            <ChristmasSparkles />
         </section>
     );
 };
